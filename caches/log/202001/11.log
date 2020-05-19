@@ -1,0 +1,12 @@
+---------------------------------------------------------------
+[ 2020-01-11T13:59:18+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php?s=wap/category/index&id=85
+[ info ] www.gjm.com/index.php?s=wap/category/index&id=85 [运行时间：0.081373s][吞吐率：12.29req/s] [内存消耗：2,494.03kb] [文件加载：47]
+[ error ] [0]模板文件不存在:./template/default/wap/list_page.html[G:\phpStudy\PHPTutorial\WWW\yunucms\system\library\think\view\driver\Think.php:80]
+---------------------------------------------------------------
+[ 2020-01-11T13:59:31+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php?s=wap/tag/index&id=85
+[ info ] www.gjm.com/index.php?s=wap/tag/index&id=85 [运行时间：0.072772s][吞吐率：13.74req/s] [内存消耗：2,140.59kb] [文件加载：46]
+[ error ] [8]未定义数组索引: title[G:\phpStudy\PHPTutorial\WWW\yunucms\app\wap\controller\Tag.php:9]
+---------------------------------------------------------------
+[ 2020-01-11T13:59:36+08:00 ] 127.0.0.1 127.0.0.1 GET /index.php?s=wap/tag/index&title=85
+[ info ] www.gjm.com/index.php?s=wap/tag/index&title=85 [运行时间：0.059068s][吞吐率：16.93req/s] [内存消耗：2,139.45kb] [文件加载：45]
+[ error ] [0]模板文件不存在:G:\phpStudy\PHPTutorial\WWW\yunucms\template\default\wap\tag_index.html[G:\phpStudy\PHPTutorial\WWW\yunucms\system\library\think\view\driver\Think.php:80]

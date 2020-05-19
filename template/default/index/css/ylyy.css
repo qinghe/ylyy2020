@@ -1,0 +1,25 @@
+.pc_banner .pcbanner .pagination {
+  position: absolute;
+  left: 0;
+  text-align: center;
+  bottom: 5px;
+  width: 100%;
+  z-index: 999;
+}
+
+.pc_banner .pcbanner .pagination span.swiper-pagination-bullet {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  opacity: 1;
+  border-radius: 10px;
+  background: white;
+  margin: 0 3px;
+  cursor: pointer;
+  transition: width 0.3s ease-in-out;
+}
+
+.pc_banner .pcbanner .pagination span.swiper-pagination-bullet-active {
+  background: #036aac;
+  width: 12px;
+}

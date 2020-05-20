@@ -1,0 +1,23 @@
+$(document).ready(function(){
+  $('.tem1').click(function(){
+      $('.index_tem1').show();
+      $('.index_tem2').hide();
+      $('.tem1').removeClass('acts');
+      $('.tem1').addClass('act');
+      $('.tem2').removeClass('act');
+      $('.tem2').addClass('acts');
+      $('.list1').show();
+      $('.list2').hide();
+  })
+  $('.tem2').click(function(){
+      $('.index_tem1').hide();
+      $('.index_tem2').show();
+      $('.tem2').removeClass('acts');
+      $('.tem2').addClass('act');
+      $('.tem1').removeClass('act');
+      $('.tem1').addClass('acts');
+      $('.list2').show();
+      $('.list1').hide();
+  })
+  
+})

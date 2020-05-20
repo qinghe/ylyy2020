@@ -521,6 +521,7 @@ if (!function_exists('abort')) {
      */
     function abort($code, $message = null, $header = [])
     {
+      var_dump($code);
         if ($code instanceof Response) {
             throw new HttpResponseException($code);
         } else {

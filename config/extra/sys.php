@@ -5,20 +5,20 @@ return [
 	'seo_description'=>'[prov_or_city]某某公司创立于2000年， 经过多年的不懈努力，公司现已经成为一家专业从事IT产品开发、生产和销售的高科技企业。公司成立几年来，一直致力于工控/服务器机箱及各种非标箱体的开发与生产，产品现广泛应用于计算机网络、监控、安防、广电、通讯和仪器设备等多种行业',
 	'seo_cwkeyword'=>'厂家,报价,哪家好,批发',
 	'site_title'=>'某某机械有限公司',
-	'site_url'=>'localhost:88',
-	'site_levelurl'=>'localhost:88',
+	'site_url'=>'www.david.com:88',
+	'site_levelurl'=>'david.com:88',
 	'site_logo'=>'/uploads/image/20170929/fbe0415ab900053aef3846e0077c1ef5.jpg',
-	'site_copyright'=>'<p>TEL：010-88888888   MOB:13888888888  EMAIL：66666666@qq.com</p>
-<p>本软件已进行版权登记，相关权利受法律保护，著作权信息：中华人民共和国国家版权局 计算机软件著作权登记证书：2018SR118857 </p>
-<p>版权所有 © 2019 云优CMS企业网站管理系统（www.yunucms.com）镇江市云优网络科技有限公司 保留所有权利 Powered by <a href=\"http://www.yunucms.com\" target=\"_blank\" style=\"color:#fff\">YUNUCMS v2.0.8</a></p>
-<p>提示说明：本网站数据只供云优CMS功能演示使用，相关数据不具真实性，如需要了解云优CMS的相关功能请访问云优CMS官网</p>',
+	'site_copyright'=>'<span>@copyright 2014-2020 RuanShan. ALL RIGHTS RESERVED</span> <span>大连软山网络有限公司版权所有</span> <a href=\"http://www.beian.miit.gov.cn/\" target=\"_blank\"><span>辽ICP备15015416号-1</span></a> <span>|</span><span>
+              <a target=\"_blank\" href=\"http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802030405\"><img src=\"/themes/ruanshan/public/assets/images/beian.png\" style=\"vertical-align:middle;margin-right:8px;\">辽公网安备 21010802030405号</a>
+            </span>
+            <span>|</span><span><a href=\"http://ruanshan.com/\" target=\"_blank\">中文版</a></span><span>|</span><span><a href=\"http://ruanshan.com/en/\" target=\"_blank\">English</a></span>',
 	'site_guide'=>'0',
 	'theme_style'=>'default',
 	'url_model'=>'1',
 	'wap_auto'=>'0',
 	'wap_logo'=>'/uploads/image/20170922/20170922163524_57831.jpg',
 	'wap_copyright'=>'Powered by YUNUCMS 2.0.8 ©2008-2019 www.yunucms.com',
-	'wap_levelurl'=>'0',
+	'wap_levelurl'=>'1',
 	'login_url'=>'yunu.php',
 	'seo_bdurl'=>'',
 	'seo_area'=>'1',

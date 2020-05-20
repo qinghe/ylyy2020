@@ -1,100 +1,32 @@
-    <div class="footer">
-      <div class="center ">
-        <div class="inner clearfix">
-          <section class="col col1">
-            <h1>网站导航</h1>
-            <yunu:nav typeid='1'>
-                <li  >
-                      <span class="service"></span><a class="full" href="{$nav.url}"><span>{$nav.title}</span></a>
-                </li>
-            </yunu:nav>
+    <div class="sun_footer">
+        <div class="container">
+            <ul class="celarfix">
+                <li><a href="http://www.langfengyaoye.com/m/">
 
-          </section>
+<i class="iconfont icon-shouye"></i>
 
-          <section class="col col2">
-            <h1>联系我们</h1>
-            <p><span class="icon icon1"></span><span><yunu:block name='dizhi' /></span></p>
-            <p><span class="icon icon2"></span><span style="color:#FFF">024-</span><span style="color:#FFF"><yunu:block name='dianhua' /></span></p>
-            <p><span class="icon icon2"></span><yunu:block name='shouji' /></span></p>
-            <p><span class="icon icon3"></span><span><yunu:block name='email' /></span></p>
-          </section>
 
-          <section class="col col3">
-            <div class="contact">
-              <div><img style="max-width:100%; max-height:100%; display:inline;" src="/themes/ruanshan/public/assets/images/qrcode-h5.jpg">
-                <p>订阅h5案例分享,了解更多h5案例的秘密</p>
-              </div>
-              <div class="ewm"><yunu:block name='ewm' />
-                <p>订阅软山官方账号,让软山提供更好的服务</p>
-              </div>
-            </div>
-          </section>
+                        <p>首页</p>
+                    </a></li>
+                <li><a href="tel:18145689010">
+                        <i class="iconfont icon-mobilephone"></i>
+                        <p>电话</p>
+                    </a></li>
+                <li><a href="http://www.langfengyaoye.com/m/message/">
+                        <i class="iconfont icon-all"></i>
+                        <p>分类</p>
+                    </a></li>
+               <li><a href="http://www.langfengyaoye.com/m/about_mobile/m_sjdt.html">
+                        <i class="iconfont icon-map"></i>
+                        <p>位置</p>
+                    </a></li>
+                <li class="share"><a href="javscript:;">
+                        <i class="iconfont icon-cart"></i>
+                        <p>淘宝</p>
+                    </a></li>
+            </ul>
         </div>
-
-        <div class="foot3">
-          <div class="inner">
-            <yunu:config name="site_copyright" />
-          </div>
-        </div>
-
-      </div>
     </div>
-
-    <div class="right_fix">
-      <div class="text clearfix">
-        <ul>
-          <li>
-            <div class="pic">
-              <img class="img1" src="__PUBLIC__/img/fix1.png">
-              <img class="img2" src="__PUBLIC__/img/fix1.png">
-              <span>产品搜索</span>
-            </div>
-            <div class="text1">
-              <div class="search clearfix">
-                <form action="<yunu:url name='search'/>" method="post">
-                  <input class="inp1" type="text" name="key" placeholder="请输入产品名称">
-                  <input class="btn_sub" type="submit" name="" value="">
-                </form>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="pic">
-              <a target="blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=<yunu:block name='qq' />&amp;site=qq&amp;menu=yes">
-                <img class="img1" src="__PUBLIC__/img/fix2.png">
-                <img class="img2" src="__PUBLIC__/img/fix2.png">
-                <span>在线咨询</span>
-              </a>
-            </div>
-          </li>
-          <li>
-            <div class="pic">
-              <img class="img1" src="__PUBLIC__/img/fix3.png">
-              <img class="img2" src="__PUBLIC__/img/fix3.png">
-              <span>二维码</span>
-            </div>
-            <div class="text">
-              <yunu:block name='ewm' />
-            </div>
-          </li>
-          <li class="btntop">
-            <div class="pic">
-              <img class="img1" src="__PUBLIC__/img/fix4.png">
-              <img class="img2" src="__PUBLIC__/img/fix4.png">
-              <span>返回顶部</span>
-            </div>
-          </li>
-          <script type="text/javascript">
-            $('.btntop').click(function() {
-              $('body,html').animate({
-                scrollTop: 0
-              }, 500);
-            })
-          </script>
-        </ul>
-      </div>
-    </div>
-
     <script type="text/javascript">
       $(function() {
         $('.imgauto img').imgAuto();

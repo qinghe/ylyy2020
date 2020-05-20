@@ -1,14 +1,16 @@
 <?php
 namespace app\index\controller;
+
 use think\Controller;
 use think\Config;
 use think\Db;
 
-class Common extends Controller{
- 	public function _initialize()
+class Common extends Controller
+{
+    public function _initialize()
     {
         $lock = 'data/install.lock';
-        if(!is_file($lock)){
+        if (!is_file($lock)) {
             $this->redirect('/index.php?s=index/install/index');
         }
         redirecturl();
@@ -17,17 +19,19 @@ class Common extends Controller{
             error_reporting(E_ALL);
         }
 
-    	$module = strtolower(request()->module());
+        //$module = strtolower(request()->module());
+        // 只是使用 wap 模板，不使用 wap 模块
+        $module = is_mobile() ? 'wap' : 'app';
         $this->tpl_file = './template/'.config('sys.theme_style').'/'.$module.'/';
         $area = '';
         if (input('area')) {
-        	$area = input('area');
+            $area = input('area');
             $areadata = db('area')->where(['etitle'=>$area])->find();
             if (!$areadata) {
                 abort(404);
-            }else{
-            	if($areadata['isurl']){
-                  	abort(404);
+            } else {
+                if ($areadata['isurl']) {
+                    abort(404);
                 }
             }
         }
@@ -35,9 +39,9 @@ class Common extends Controller{
         if ($_SERVER['HTTP_HOST'] != config('sys.site_url')) {
             $levelurl = str_replace(config('sys.site_levelurl'), '', $_SERVER['HTTP_HOST']);
             if ($levelurl != '') {
-            	$levelurl = str_replace('.', '', $levelurl);
-            	$area = $levelurl != 'www' ? $levelurl : $area;
-                    
+                $levelurl = str_replace('.', '', $levelurl);
+                $area = $levelurl != 'www' ? $levelurl : $area;
+
                 $areadata = db('area')->where(['etitle'=>$area,'isurl'=>1])->find();
                 if (!$areadata) {
                     abort(404);
@@ -49,7 +53,7 @@ class Common extends Controller{
             if ($defaultarea) {
                 if (!$area) {
                     $area = $defaultarea;
-                }else{
+                } else {
                     if ($area == $defaultarea) {
                         $this->redirect(config('sys.site_protocol')."://".config('sys.site_url'));
                     }
@@ -62,11 +66,11 @@ class Common extends Controller{
             if ($areainfo && !$areainfo['isopen']) {
                 abort(404);
             }
-           	$this->area = $area;
+            $this->area = $area;
             session('sys_area', $area);
             session('sys_areainfo', $areainfo);
             config('sys.sys_area', $area);
-        }else{
+        } else {
             config('sys.sys_area', null);
             session('sys_area', null);
             session('sys_areainfo', null);

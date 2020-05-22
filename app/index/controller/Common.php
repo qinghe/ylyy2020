@@ -19,9 +19,7 @@ class Common extends Controller
             error_reporting(E_ALL);
         }
 
-        //$module = strtolower(request()->module());
-        // 只是使用 wap 模板，不使用 wap 模块
-        $module = is_mobile() ? 'wap' : 'app';
+        $module = strtolower(request()->module());
         $this->tpl_file = './template/'.config('sys.theme_style').'/'.$module.'/';
         $area = '';
         if (input('area')) {

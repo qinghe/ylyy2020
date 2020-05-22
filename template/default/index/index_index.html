@@ -24,7 +24,7 @@
   <script type="text/javascript" src="__PUBLIC__/js/swiper.min.js"></script>
 </head>
 
-<body>
+<body class=" ">
   <include file="public:header" />
   <script type="text/javascript">
     $('.head_nav li').eq(0).addClass('on');
@@ -121,38 +121,31 @@
     <!-- 关于 -->
     <div class="i_box2 clearfix">
       <div class="center">
-        <yunu:type typeid='20'>
-          <div class="i_box2_tit clearfix">
-            <p><i>{$type.title} / {$type.subtitle}</i></p>
-            <span></span>
+          <div class="i_box2_tit clearfix tac"  >
+            <p><span class="index_title_bg_left">&nbsp;</span> <span class="index_title"><i>关于我们 </i></span>
+              <span class="index_title_bg_right">&nbsp;</span>
+            </p>
+            <p class="index_subtitle"> 一家集膏药加工、贴牌膏药加工、膏药连锁加盟一体的企业 </p>
           </div>
-        </yunu:type>
         <div class="i_box2_content clearfix">
           <div class="i_box2_content1 fl">
             <yunu:type typeid='85'>
-              <div class="flimg">
-                <img src="__PUBLIC__/img/img1.png">
-              </div>
+
               <div class="i_box2_text fr">
                 <p>{$type.desc}</p>
+                <div class="i_box2_menu ">
+                    <a href="/index.php?s=index/category/index&id=85">公司简介</a>
+                    <a href="/index.php?s=index/category/index&id=30">联系方式</a>
+                    <a href="/index.php?s=index/category/index&id=73">在线留言</a>
+                 </div>
               </div>
               <div class="i_box2_img fl">
                 <img src="{$type.pic}">
               </div>
             </yunu:type>
-            <div class="i_box2_menu fl">
-              <yunu:type typeid='20'>
-                <a href="{$type.url}">公司简介</a>
-              </yunu:type>
-              <yunu:type typeid='30'>
-                <a href="{$type.url}">联系方式</a>
-              </yunu:type>
-              <yunu:type typeid='73'>
-                <a href="{$type.url}">在线留言</a>
-              </yunu:type>
-            </div>
+
           </div>
-          <div class="fr">
+          <div class="fr no">
             <div class="i_box2_fr_img">
               <div class="swiper-container">
                 <div class="swiper-wrapper">
@@ -182,18 +175,22 @@
     </div>
 
     <!-- 产品 -->
-    <div class="index_pr">
-      <h2 class="index_title" style="height:28px;">产品展示</h2>
-      <div class="index_prs">
+    <div class="  ">
+      <div class=" titlewrap clearfix tac pt50 " >
+        <p><span class="index_title_bg_left">&nbsp;</span>  <span class="index_title"><i>产品展示 </i></span>
+          <span class="index_title_bg_right">&nbsp;</span>
+        </p>
+        <p class="index_subtitle"> 为众多医药界同仁及企业提供优质产品</p>
+      </div>
+      <div class="index_pr ">
+
+       <div class="index_prs pt45 pb45">
 
         <div class="picScroll" >
           <a class="next" style="margin-left:5px"><img src="__PUBLIC__/img/right.png" alt="右"></a>
           <a class="prev" style="margin-right:5px"><img src="__PUBLIC__/img/left.png" alt="左"></a>
           <div class="picScroll-left">
-            <div class="hd">
 
-
-            </div>
 
             <div class="bd">
               <div class="tempWrap clearfix" style="overflow:hidden; position:relative;  ">
@@ -259,11 +256,16 @@
         </div>
         <div class="cl"></div>
       </div>
+      </div>
     </div>
     <!-- 新闻 -->
-    <div class="index_new">
+    <div class="index_new pt50 pb25">
       <div class="index_news">
-        <div style="height:70px;"></div>
+        <div class="  clearfix tac pb25" >
+          <p><span class="index_title_bg_left">&nbsp;</span>  <span class="index_title"><i>新闻资讯 </i></span>
+            <span class="index_title_bg_right">&nbsp;</span>
+          </p>
+         </div>
         <div class="index_news_type clearfix" style="margin-left:100px">
           <div class="fl" style="width:310px;margin-top:7px"><img src="templates/default/images/xx.jpg" alt="" style="width:310px;"></div>
           <div class="fl" style="width:350px;">
@@ -275,46 +277,20 @@
         </div>
 
         <div class="index_tem1 index_tem">
-
           <div style="height:160px;overflow: hidden;">
-
-            <img src="__PUBLIC__/img/sample/20170721073011_40000.png" alt="">
+            <img src="__PUBLIC__/img/sample/news1.jpg" alt="">
             <!-- <img src="" alt="" style="width:100%;">   -->
-
           </div>
-
           <yunu:list cid="28" limit="1" top="1">
-
           <div style="top:176px;width:980px;">
             <a href="{$list.url}">
-              <div class="fl" style="font-size:16px;color:#fff;width:;">{$list.title} </div>
+              <div class="fl f16" style="color:#fff; ">{$list.title} </div>
             </a>
-            <div class="fr" style="position: relative;">
-              <div class="fl" style="position: relative;line-height:30px;color:#fff;margin-right:8px">分享到</div>
-              <div class="fl" style="position: relative;">
-                <a class="jiathis_button_weixin"><img src="templates/default/images/wx.jpg" alt=""></a>
-              </div>
-              <div class="fl" style="position: relative;">
-                <a class="jiathis_button_qzone"><img src="templates/default/images/qq.jpg" alt=""></a>
-              </div>
-              <div class="fl" style="position: relative;">
-                <a class="jiathis_button_tsina"><img src="templates/default/images/xl.jpg" alt=""></a>
-              </div>
-              <!-- JiaThis Button BEGIN -->
-              <!-- <div class="jiathis_style_24x24">
-                                    <a class="jiathis_button_qzone"></a>
-                                    <a class="jiathis_button_tsina"></a>
-                                    <a class="jiathis_button_tqq"></a>
-                                    <a class="jiathis_button_weixin"></a>
-                                    <a class="jiathis_button_renren"></a>
-                                    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
-                                </div> -->
-              <script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js" charset="utf-8"></script>
-              <!-- JiaThis Button END -->
-              <div class="cl"></div>
-            </div>
-            <div class="cl"></div>
+            <div class="fr f16" style="position: relative;color:#fff;">
+              {$list.create_time|date='m-d',###}
 
+             </div>
+            <div class="cl"></div>
           </div>
           <a href="{$list.url}">
             <div style="top:220px;font-size:14px;color:#fff;line-height:35px;text-indent:2em">
@@ -325,43 +301,15 @@
 
         </div>
         <div class="index_tem2 index_tem no">
-
           <div style="height:160px;overflow: hidden;">
-
-            <img src="uploadfile/image/20170721/20170721073011_40000.png" alt="">
+            <img src="__PUBLIC__/img/sample/news2.jpg" alt="">
             <!-- <img src="uploadfile/image/20170721/20170721152314_82224.jpg" alt="" style="width:100%;">   -->
-
           </div>
-
-
-
           <div style="top:176px;width:980px;">
             <a href="index.php?p=news_show&amp;id=24&amp;c_id=1&amp;lanmu=1">
               <div class="fl" style="font-size:16px;color:#fff;width:;">多部门《关于印发推进药品价格改革意见的通知》 药品最高零售价即将取消</div>
             </a>
             <div class="fr" style="position: relative;">
-              <div class="fl" style="position: relative;line-height:30px;color:#fff;margin-right:8px">分享到</div>
-              <div class="fl" style="position: relative;">
-                <a class="jiathis_button_weixin"><img src="templates/default/images/wx.jpg" alt=""></a>
-              </div>
-              <div class="fl" style="position: relative;">
-                <a class="jiathis_button_qzone"><img src="templates/default/images/qq.jpg" alt=""></a>
-              </div>
-              <div class="fl" style="position: relative;">
-                <a class="jiathis_button_tsina"><img src="templates/default/images/xl.jpg" alt=""></a>
-              </div>
-              <!-- JiaThis Button BEGIN -->
-              <!-- <div class="jiathis_style_24x24">
-                                    <a class="jiathis_button_qzone"></a>
-                                    <a class="jiathis_button_tsina"></a>
-                                    <a class="jiathis_button_tqq"></a>
-                                    <a class="jiathis_button_weixin"></a>
-                                    <a class="jiathis_button_renren"></a>
-                                    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
-                                </div> -->
-              <script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js" charset="utf-8"></script>
-              <!-- JiaThis Button END -->
-              <div class="cl"></div>
             </div>
 
           </div>
@@ -372,12 +320,10 @@
           </a>
         </div>
       </div>
-      <div style="height:100px;"></div>
       <div class="index_news_list list1 clearfix">
         <yunu:list cid="28" limit="3" flag="1">
 
-          <div class="index_news_list_tem">
-            <div style="height:15px;"></div>
+          <div class="index_news_list_tem pt15">
             <div class="fl">
               <div style="width:80px;">
                 <div class="tl" style="font-size:18px;">
@@ -407,8 +353,8 @@
       <div class="index_news_list list2 clearfix no">
         <yunu:list cid="89" limit="3" flag="1">
 
-          <div class="index_news_list_tem">
-            <div style="height:15px;"></div>
+          <div class="index_news_list_tem pt15">
+
             <div class="fl">
               <div style="width:80px;">
                 <div class="tl" style="font-size:18px;">
@@ -437,115 +383,66 @@
       </div>
     </div>
 
-    <!-- 客户案例 -->
-    <div class="i_box3 clearfix">
-      <div class="center">
-        <div class="i_box3_tit clearfix">
-          <p>客户案例 / CASES</p>
+    <!-- 服务优势 -->
+    <div class=" index_adv clearfix">
+      <div class="center  pt30 pb50">
+        <div class="   ">
+          <div class="    tac pd25" >
+            <p><span class="index_title_bg_left">&nbsp;</span>  <span class="index_title"><i>服务优势 </i></span>
+              <span class="index_title_bg_right">&nbsp;</span>
+            </p>
+            <p class="index_subtitle"> 以优质的品牌服务于客户，受到合作伙伴的一致追捧和好评。 </p>
+
+           </div>
         </div>
-        <div class="i_box3_content clearfix" id="marquee1">
-          <ul>
-            <yunu:list cid="29" limit="8" flag="1">
-              <li><a href="{$list.url}">
-                  <div class="imgauto"><img src="{$list.pic}" onerror="this.src='__PUBLIC__/img/nopic.png'"></div>
-                </a></li>
-            </yunu:list>
-          </ul>
-        </div>
-        <script src="__PUBLIC__/js/jquery.kxbdMarquee.js"></script>
-        <script type="text/javascript">
-          (function() {
-            $("#marquee1").kxbdMarquee({
-              direction: "left"
-            });
-          })();
-        </script>
-        <div class="i_box3_a">
-          <yunu:type typeid='29'>
-            <a href="{$type.url}">MORE+</a>
-          </yunu:type>
+        <div class=" pt15 pb15">
+          <ul class="advs"> <li > <div class="adv"><p class="p1">OEM </p><p class="p2"> 自主品牌加工</p> </div></li>
+            <li> <div class="adv"><p class="p1">ODM </p><p class="p2"> 品牌输出专家</p></div> </li>
+              <li> <div class="adv"><p class="p1">20年专注 </p><p class="p2"> 医药贴膏贴剂</br>研发生产</p></div> </li>
+                <li> <div class="adv"><p class="p1">OBM </p><p class="p2"> 现有品牌转让</p></div> </li>
+                  <li> <div class="adv"><p class="p1">私人订制 </p><p class="p2"> 满足个性需求</p></div> </li>
+           </ul>
         </div>
       </div>
     </div>
 
-    <!-- 新闻 -->
-    <div class="i_box4 clearfix">
-      <div class="center">
-        <div class="i_box4_content clearfix">
-          <div class="fl">
-            <div class="new_list clearfix">
-              <ul>
-                <yunu:list cid="28" limit="5" flag="1">
-                  <li>
-                    <div class="i_box4_time">
-                      <p>
-                        <span>{$list.create_time|date='d',###}</span>
-                        <i>{$list.create_time|date='Y-m',###}</i>
-                      </p>
-                    </div>
-                    <div class="i_box4_text">
-                      <a href="{$list.url}"><span>{$list.title}</span></a>
-                      <p>{$list.content|str2sub=100, true}</p>
-                    </div>
-                  </li>
-                </yunu:list>
-              </ul>
-            </div>
-          </div>
-          <div class="fr">
-            <h3>联系方式 / CONTACT</h3>
-            <p>
-              <b><img src="__PUBLIC__/img/dz.png" alt="图片名"></b>
-              <span>地址：
-                <yunu:block name='dizhi' /></span>
-            </p>
-            <p>
-              <b><img src="__PUBLIC__/img/dh.png" alt="图片名"></b>
-              <span>电话：
-                <yunu:block name='dianhua' /></span>
-            </p>
-            <p>
-              <b><img src="__PUBLIC__/img/sj.png" alt="图片名"></b>
-              <span>手机：
-                <yunu:block name='shouji' /></span>
-            </p>
-            <p>
-              <b><img src="__PUBLIC__/img/yx.png" alt="图片名"></b>
-              <span>邮箱：
-                <yunu:block name='email' /></span>
-            </p>
-            <div class="map">
-              <yunu:block name='map' />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+
     <!-- 友链 -->
-    <div class="flink">
-      <div class="center">
-        <div class="flink_tit">
-          <p></p>
-          <span>友情链接 LINKS</span>
-        </div>
-        <div class="flink_list">
-          <ul>
-            <yunu:link type="1" limit="35">
-              <li><a href="{$link.url}">{$link.title}</a></li>
-            </yunu:link>
-          </ul>
+    <div class="index_links">
+      <div class="center  pt50 pb50">
+
+        <div class=" ">
+         <ul>
+           <li>
+             <p class="p1 pl8 f20">招商销售热线</p>
+             <p class="p2 f16">024-74175222, 13941048808</p>
+           </li>
+           <li>
+             <p class="p1 pl8 f20">加盟代理</p>
+             <p class="p2 f16">全国各地加盟招商 | 点击进入</p>
+           </li>
+           <li>
+             <p class="p1 pl8 f20">亿霖旗舰店</p>
+             <p class="p2 f16">亿霖健康官方商城 | 点击进入</p>
+           </li>
+           <li>
+             <p class="p1 pl8 f20">亿霖专营店</p>
+             <p class="p2 f16">亿霖官方淘宝店 | 点击进入</p>
+           </li>
+
+         </ul>
         </div>
       </div>
     </div>
     <!-- 城市 -->
-    <div class="flink">
-      <div class="center">
-        <div class="flink_tit">
-          <p></p>
-          <span>城市分站 CITYS</span>
+    <div class="  fcities">
+      <div class="center  pt50 pb50">
+        <div class="pt15 pb15 ">
+          <p><span class="f18 fc">城市分站 </span> <span class="f16"> CITIES</span></p>
+
         </div>
         <div class="flink_list">
-          <ul>
+          <ul class="pb10 ">
             <yunu:area type="1" limit="35">
               <li><a href="{$area.url}">{$area.title}</a></li>
             </yunu:area>

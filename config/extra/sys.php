@@ -4,12 +4,12 @@ return [
 	'seo_keywords'=>'[prov_or_city]关键词1,[prov_or_city]关键词2,[prov_or_city]关键词3',
 	'seo_description'=>'[prov_or_city]某某公司创立于2000年， 经过多年的不懈努力，公司现已经成为一家专业从事IT产品开发、生产和销售的高科技企业。公司成立几年来，一直致力于工控/服务器机箱及各种非标箱体的开发与生产，产品现广泛应用于计算机网络、监控、安防、广电、通讯和仪器设备等多种行业',
 	'seo_cwkeyword'=>'厂家,报价,哪家好,批发',
-	'site_title'=>'某某机械有限公司',
+	'site_title'=>'铁岭亿霖生物科技有限公司',
 	'site_url'=>'www.david.com:88',
 	'site_levelurl'=>'david.com:88',
-	'site_logo'=>'/uploads/image/20170929/fbe0415ab900053aef3846e0077c1ef5.jpg',
+	'site_logo'=>'/uploads/image/20200522/ee60cbf9ec932a73f652891fa156f59d.png',
 	'site_copyright'=>'<span>@copyright 2014-2020 RuanShan. ALL RIGHTS RESERVED</span> <span>大连软山网络有限公司版权所有</span> <a href=\"http://www.beian.miit.gov.cn/\" target=\"_blank\"><span>辽ICP备15015416号-1</span></a> <span>|</span><span>
-              <a target=\"_blank\" href=\"http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802030405\"><img src=\"/themes/ruanshan/public/assets/images/beian.png\" style=\"vertical-align:middle;margin-right:8px;\">辽公网安备 21010802030405号</a>
+              <a target=\"_blank\" href=\"http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802030405\"><img src=\"__PUBLIC__/img/beian.png\" style=\"vertical-align:middle;margin-right:8px;\">辽公网安备 21010802030405号</a>
             </span>
             <span>|</span><span><a href=\"http://ruanshan.com/\" target=\"_blank\">中文版</a></span><span>|</span><span><a href=\"http://ruanshan.com/en/\" target=\"_blank\">English</a></span>',
 	'site_guide'=>'0',
@@ -64,7 +64,7 @@ return [
 	'bdcx_url'=>'',
 	'upload_file_size'=>'20480',
 	'upload_file_ext'=>'rar,zip,pdf,doc,docx,xls,xlsx,ttf',
-	'upload_image_size'=>'700',
+	'upload_image_size'=>'800',
 	'upload_image_ext'=>'jpg,png,gif,ico',
 	'image_watermark'=>'0',
 	'image_watermark_pos'=>'9',

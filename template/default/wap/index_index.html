@@ -19,9 +19,8 @@
   <link rel="stylesheet" href="__PUBLIC__/css/yunu.css">
   <link rel="stylesheet" href="__PUBLIC__/css/ylyy.css">
   <link rel="stylesheet" href="__PUBLIC__/css/swiper.min.css">
-  <link rel="stylesheet" href="//at.alicdn.com/t/font_1343574_hd53i68obnq.css">
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1343574_myw2d14xwe.css">
   <script type="text/javascript" src="__PUBLIC__/js/yunu.js"></script>
-  <script type="text/javascript" src="__PUBLIC__/js/TouchSlide.1.1.js"></script>
   <script type="text/javascript" src="__PUBLIC__/js/swiper.min.js"></script>
 
 </head>
@@ -119,6 +118,12 @@
   </div>
 
   <div class="main">
+    <div class="search  sea">
+      <form action="<yunu:url name='search'/>" method="post">
+        <input class=" sea1" type="text" name="key" placeholder="请输入产品名称">
+        <input type="image" class="fr sea2" src="__PUBLIC__/img/sample/sea.png" value="搜索">
+      </form>
+    </div>
 
     <!-- 关于 -->
     <div class="i_box2 clearfix">
@@ -178,7 +183,7 @@
 
     <!-- 产品 -->
     <div class="index_pr">
-      <div class=" titlewrap clearfix tac pt50 " >
+      <div class=" titlewrap clearfix tac  " >
         <p><span class="index_title_bg_left">&nbsp;</span>  <span class="index_title"><i>产品展示 </i></span>
           <span class="index_title_bg_right">&nbsp;</span>
         </p>
@@ -187,20 +192,14 @@
       <div class="index_prs">
 
         <div class="picScroll" >
-          <a class="next" style="margin-left:5px"><img src="__PUBLIC__/img/right.png" alt="右"></a>
-          <a class="prev" style="margin-right:5px"><img src="__PUBLIC__/img/left.png" alt="左"></a>
           <div class="picScroll-left">
-            <div class="hd">
-
-
-            </div>
-
+     
             <div class="bd">
-              <div class="tempWrap clearfix" style="overflow:hidden; position:relative;  ">
-                <ul class="picList" >
-
+              <div class="swiper-container " style="  position:relative;  ">
+                 
+                <ul class="swiper-wrapper" >
                   <yunu:list cid="21" limit="8" flag="1" orderby="sort asc">
-                  <li style=" ">
+                  <li class="swiper-slide ">
                             <div class="pic">
                                 <div style="height:15px;"></div>
                                 <div class="title" style="font-size:0.8em">{$list.title}</div>
@@ -249,16 +248,29 @@
                                 </div>
                             </div>
 
-                        </li>
-
+                  </li>
                   </yunu:list>
-
                 </ul>
+                <div class="swiper-pagination"></div>
+
               </div>
             </div>
 
           </div>
           <script type="text/javascript">
+              var mySwiper = new Swiper('.picScroll .swiper-container', {
+                slidesPerView: 2,
+                speed: 500,
+                autoplay: true,
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                    renderBullet: function (index, className) {
+                      return '<span class="' + className + '">' + (index + 1) + '</span>';
+                    },
+                  },
+                })
             // jQuery(".picScroll").slide({
             //   titCell: ".hd ul",
             //   mainCell: ".bd ul",
@@ -279,123 +291,90 @@
       </div>
     </div>
     <!-- 新闻 -->
-    <div class="index_new">
+    <div class="index_new pt50 pb25">
       <div class="index_news">
-
+        <div class=" titlewrap  tac pb25" >
+          <p><span class="index_title_bg_left">&nbsp;</span>  <span class="index_title"><i>新闻资讯 </i></span>
+            <span class="index_title_bg_right">&nbsp;</span>
+          </p>
+         </div>
         <div class="index_news_type "  >
-          <div class="clearfix"  >
-            <div class="fl index_news_type_tem tem1 act">公司动态</div>
-            <div class="fl index_news_type_tem tem2 acts">行业动态</div>
+          <div class="clearfix tac">
+            <div class=" index_news_type_tem tem1 act" style="display:inline-block">公司动态</div>
+            <div class=" index_news_type_tem tem2 acts" style="display:inline-block">行业动态</div>
           </div>
         </div>
 
         <div class="index_tem1 index_tem">
-
           <div style="height:160px;overflow: hidden;">
-
-            <img src="__PUBLIC__/img/sample/20170721073011_40000.png" alt="">
+            <img src="__PUBLIC__/img/sample/news1.jpg" alt="">
             <!-- <img src="" alt="" style="width:100%;">   -->
-
           </div>
-
           <yunu:list cid="28" limit="1" top="1">
-
-          <div  >
+          <div style="font-size: 16px; line-height: 1.8em;">
             <a href="{$list.url}">
-              <span   style="font-size:16px;color:#fff;">{$list.title} </span>
+              <div class="ellipsis fl f16" style="color:#fff; ">{$list.title} </div>
             </a>
+            <div class="fr f16" style="position: relative;color:#fff;">
+              {$list.create_time|date='m-d',###}
+             </div>
+            <div class="cl"></div>
           </div>
           <a href="{$list.url}">
-            <div style="top:220px;font-size:14px;color:#fff;line-height:35px;text-indent:2em">
-              {$list.content|str2sub=160, true}
+            <div style="font-size:14px;color:#fff;line-height:1.6em;text-indent:2em">
+              {$list.content|str2sub=70, true}
             </div>
           </a>
         </yunu:list>
 
         </div>
         <div class="index_tem2 index_tem no">
-
           <div style="height:160px;overflow: hidden;">
-
-            <img src="uploadfile/image/20170721/20170721073011_40000.png" alt="">
+            <img src="__PUBLIC__/img/sample/news2.jpg" alt="">
             <!-- <img src="uploadfile/image/20170721/20170721152314_82224.jpg" alt="" style="width:100%;">   -->
-
           </div>
 
-          <div style="top:176px;width:980px;">
+          <div style="font-size: 16px; line-height: 1.8em;">
             <a href="index.php?p=news_show&amp;id=24&amp;c_id=1&amp;lanmu=1">
               <div class="fl" style="font-size:16px;color:#fff;width:;">多部门《关于印发推进药品价格改革意见的通知》 药品最高零售价即将取消</div>
             </a>
             <div class="fr" style="position: relative;">
-              <div class="fl" style="position: relative;line-height:30px;color:#fff;margin-right:8px">分享到</div>
-              <div class="fl" style="position: relative;">
-                <a class="jiathis_button_weixin"><img src="templates/default/images/wx.jpg" alt=""></a>
-              </div>
-              <div class="fl" style="position: relative;">
-                <a class="jiathis_button_qzone"><img src="templates/default/images/qq.jpg" alt=""></a>
-              </div>
-              <div class="fl" style="position: relative;">
-                <a class="jiathis_button_tsina"><img src="templates/default/images/xl.jpg" alt=""></a>
-              </div>
-              <!-- JiaThis Button BEGIN -->
-              <!-- <div class="jiathis_style_24x24">
-                                    <a class="jiathis_button_qzone"></a>
-                                    <a class="jiathis_button_tsina"></a>
-                                    <a class="jiathis_button_tqq"></a>
-                                    <a class="jiathis_button_weixin"></a>
-                                    <a class="jiathis_button_renren"></a>
-                                    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
-                                </div> -->
-              <script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js" charset="utf-8"></script>
-              <!-- JiaThis Button END -->
-              <div class="cl"></div>
             </div>
 
           </div>
 
           <a href="index.php?p=news_show&amp;id=24&amp;c_id=1&amp;lanmu=1">
-            <div style="top:220px;font-size:14px;color:#fff;line-height:35px;text-indent:2em">
-              自去年10月，国家发改委发布征求药品价格放开的意见，不过后来随着价格司多位高官落马和改革后卫计委、人保部职责如何分配，一时没了下文。不过最近坊间流传多部门酝酿的《关于印发推进药品价格改革意见的通知》，自2015年7月1日起，除麻醉和一类精神药品外，取消原政府制定的药品价格。并基本上确定了以医保...</div>
+            <div style="font-size:14px;color:#fff;line-height:1.6em;text-indent:2em">
+              自去年10月，国家发改委发布征求药品价格放开的意见，不过后来随着价格司多位高官落马和改革后卫计委、人保部职责如何分配，一时没了下文。不过最近坊间流传多部门酝酿的《关于印发推进药品价格改革意见的通知》，自2015年7月1日起，除麻醉和一类精神药品外，取消原政府制定的药品价格。并基本上确定了以医保...
+            </div>
           </a>
         </div>
       </div>
-
       <div class="index_news_list list1 clearfix">
+        <ul> 
         <yunu:list cid="28" limit="3" flag="1">
 
-          <div class="index_news_list_tem">
-            <div style="height:15px;"></div>
-            <div class="fl">
-              <div style="width:80px;">
-                <div class="tl" style="font-size:18px;">
-                  {$list.create_time|date='d',###}
-                </div>
-                <div class="tr" style="font-size:30px;">
-                  <img src="templates/default/images/news0.png" alt="" style="margin-right:3px;margin-bottom:14px">{$list.create_time|date='m',###}
-                </div>
-
-              </div>
+          <li>
+            <div class="i_box4_time">
+              <p>
+                <span>{$list.create_time|date='d',###}</span>
+                <i>{$list.create_time|date='Y-m',###}</i>
+              </p>
             </div>
-            <div class="fl" style="width:230px;margin-left:40px">
-              <a href="{$list.url}">
-                <div style="font-size:16px;line-height:30px">{$list.title} </div>
-              </a>
-              <div style="width:230px;height:66px;overflow: hidden;text-indent:2em">
-
-                {$list.ftitle}</div>
+            <div class="i_box4_text">
+              <a href="{$list.url}"><span>{$list.title}</span></a>
+              <p>{$list.content|str2sub=100, true}</p>
             </div>
-            <div class="cl"></div>
-
-          </div>
+          </li>
         </yunu:list>
-
+        </ul>
 
       </div>
       <div class="index_news_list list2 clearfix no">
         <yunu:list cid="89" limit="3" flag="1">
 
-          <div class="index_news_list_tem">
-            <div style="height:15px;"></div>
+          <div class="index_news_list_tem pt15">
+
             <div class="fl">
               <div style="width:80px;">
                 <div class="tl" style="font-size:18px;">
@@ -424,99 +403,54 @@
       </div>
     </div>
 
-    <!-- 客户案例 -->
-    <div class="i_box3 clearfix">
-      <div class="center">
-        <div class="i_box3_tit clearfix">
-          <p>客户案例 / CASES</p>
-        </div>
-        <div class="i_box3_content clearfix" id="marquee1">
-          <ul>
-            <yunu:list cid="29" limit="8" flag="1">
-              <li><a href="{$list.url}">
-                  <div class="imgauto"><img src="{$list.pic}" onerror="this.src='__PUBLIC__/img/nopic.png'"></div>
-                </a></li>
-            </yunu:list>
-          </ul>
-        </div>
-        <script src="__PUBLIC__/js/jquery.kxbdMarquee.js"></script>
-        <script type="text/javascript">
-          (function() {
-            $("#marquee1").kxbdMarquee({
-              direction: "left"
-            });
-          })();
-        </script>
-        <div class="i_box3_a">
-          <yunu:type typeid='29'>
-            <a href="{$type.url}">MORE+</a>
-          </yunu:type>
-        </div>
-      </div>
-    </div>
-
+ 
     <!-- 新闻 -->
     <div class="i_box4 clearfix">
       <div class="center">
         <div class="i_box4_content clearfix">
-          <div class="fl">
-            <div class="new_list clearfix">
-              <ul>
-                <yunu:list cid="28" limit="5" flag="1">
-                  <li>
-                    <div class="i_box4_time">
-                      <p>
-                        <span>{$list.create_time|date='d',###}</span>
-                        <i>{$list.create_time|date='Y-m',###}</i>
-                      </p>
-                    </div>
-                    <div class="i_box4_text">
-                      <a href="{$list.url}"><span>{$list.title}</span></a>
-                      <p>{$list.content|str2sub=100, true}</p>
-                    </div>
-                  </li>
-                </yunu:list>
-              </ul>
-            </div>
-          </div>
+          <div class=" titlewrap  tac  pt40"  >
+            <p><span class="index_title_bg_left">&nbsp;</span> <span class="index_title"><i>联系方式 </i></span>
+              <span class="index_title_bg_right">&nbsp;</span>
+            </p>
+          </div> 
           <div class="fr">
-            <h3>联系方式 / CONTACT</h3>
+
             <p>
-              <b><img src="__PUBLIC__/img/dz.png" alt="图片名"></b>
+              <b><i class="iconfont icon-position-fill"></i> </b>
               <span>地址：
                 <yunu:block name='dizhi' /></span>
             </p>
             <p>
-              <b><img src="__PUBLIC__/img/dh.png" alt="图片名"></b>
+              <b><i class="iconfont icon-mobile-alt"></i></b>
               <span>电话：
                 <yunu:block name='dianhua' /></span>
             </p>
             <p>
-              <b><img src="__PUBLIC__/img/sj.png" alt="图片名"></b>
+              <b><i class="iconfont icon-phone-fill"></i></b>
               <span>手机：
                 <yunu:block name='shouji' /></span>
             </p>
             <p>
-              <b><img src="__PUBLIC__/img/yx.png" alt="图片名"></b>
+              <b><i class="iconfont icon-mail-fill"></i></b>
               <span>邮箱：
                 <yunu:block name='email' /></span>
             </p>
-            <div class="map">
-              <yunu:block name='map' />
-            </div>
+             
           </div>
         </div>
       </div>
     </div>
     <!-- 友链 -->
-    <div class="flink">
-      <div class="center">
-        <div class="flink_tit">
-          <p></p>
-          <span>友情链接 LINKS</span>
+ 
+
+    <div class="  fcities pt20">
+      <div class="center  ">
+        <div class="pt15 pb15 ">
+          <p><span class="f18 fc">友情链接 </span> <span class="f16"> LINKS</span></p>
+
         </div>
         <div class="flink_list">
-          <ul>
+          <ul class="pb10 ">
             <yunu:link type="1" limit="35">
               <li><a href="{$link.url}">{$link.title}</a></li>
             </yunu:link>
@@ -525,14 +459,14 @@
       </div>
     </div>
     <!-- 城市 -->
-    <div class="flink">
-      <div class="center">
-        <div class="flink_tit">
-          <p></p>
-          <span>城市分站 CITYS</span>
+    <div class="  fcities pb50">
+      <div class="center pb50">
+        <div class="pt15 pb15 ">
+          <p><span class="f18 fc">城市分站 </span> <span class="f16"> CITIES</span></p>
+
         </div>
         <div class="flink_list">
-          <ul>
+          <ul class="pb10 ">
             <yunu:area type="1" limit="35">
               <li><a href="{$area.url}">{$area.title}</a></li>
             </yunu:area>

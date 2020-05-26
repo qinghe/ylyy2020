@@ -8,10 +8,10 @@ return [
 	'site_url'=>'www.david.com:88',
 	'site_levelurl'=>'david.com:88',
 	'site_logo'=>'/uploads/image/20200522/ee60cbf9ec932a73f652891fa156f59d.png',
-	'site_copyright'=>'<span>@copyright 2014-2020 RuanShan. ALL RIGHTS RESERVED</span> <span>大连软山网络有限公司版权所有</span> <a href=\"http://www.beian.miit.gov.cn/\" target=\"_blank\"><span>辽ICP备15015416号-1</span></a> <span>|</span><span>
+	'site_copyright'=>'<span>@copyright 2005-2020 YILIN. ALL RIGHTS RESERVED</span> <span>铁岭亿霖生物科技有限公司</span> <a href=\"http://www.beian.miit.gov.cn/\" target=\"_blank\"><span>辽ICP备15015416号-1</span></a> <span>|</span><span>
               <a target=\"_blank\" href=\"http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802030405\"><img src=\"__PUBLIC__/img/beian.png\" style=\"vertical-align:middle;margin-right:8px;\">辽公网安备 21010802030405号</a>
             </span>
-            <span>|</span><span><a href=\"http://ruanshan.com/\" target=\"_blank\">中文版</a></span><span>|</span><span><a href=\"http://ruanshan.com/en/\" target=\"_blank\">English</a></span>',
+            ',
 	'site_guide'=>'0',
 	'theme_style'=>'default',
 	'url_model'=>'1',

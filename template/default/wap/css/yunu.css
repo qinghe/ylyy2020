@@ -2200,7 +2200,7 @@ body {
 }
 
 .m_header .m_head_content .m_head_logo p span {
-  color: #1c4587;
+  color: #000;
   font-size: 19px;
   line-height: 25px;
   font-weight: bold;
@@ -2209,7 +2209,7 @@ body {
 }
 
 .m_header .m_head_content .m_head_logo p i {
-  color: #1c4587;
+  color: #000;
   font-size: 12px;
   line-height: 18px;
   font-style: normal;
@@ -4017,13 +4017,10 @@ div.zoomMask {
     margin-right: 0;
   }
   .i_box2 {
-    margin-top: 20px;
     padding: 30px 2%;
   }
   .i_box2 .i_box2_content .i_box2_content1 {
     width: 100%;
-    padding-bottom: 50px;
-    margin-top: 30px;
   }
   .i_box2 .i_box2_content .fr {
     width: 100%;
@@ -4033,13 +4030,12 @@ div.zoomMask {
     width: 100%;
     margin: 0;
     padding: 0 20px;
-    background: none;
+    background-color: transparent ;
     display: block;
   }
   .i_box2 .i_box2_content .i_box2_content1 .i_box2_img {
     width: 100%;
     margin-left: 0;
-    padding: 0 20px;
     margin-top: 10px;
   }
   .i_box2 .i_box2_content .i_box2_content1 .i_box2_menu {
@@ -4051,7 +4047,7 @@ div.zoomMask {
     display: none;
   }
   .i_box4 {
-    padding: 10px 2%;
+    padding: 10px 3%;
   }
   .i_box4_content .fl {
     width: 100%;
@@ -4185,8 +4181,7 @@ div.zoomMask {
     height: auto;
   }
   .i_box2 .i_box2_content .i_box2_content1 {
-    background-size: 25px;
-    padding-bottom: 35px;
+
   }
   .i_box2 .i_box2_content .fr .i_box2_fr_img .swiper-wrapper .imgauto {
     height: 2rem;

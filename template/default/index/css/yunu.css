@@ -3974,7 +3974,8 @@ padding-bottom: 20px;
   color: #999999;  
 }
 .footer .foot3 {
-  width:100%;min-width:1200px; background:#000;
+  width:100%;min-width:1200px; 
+  border-top: 1px solid #909399;
 }
 
 .footer .inner {

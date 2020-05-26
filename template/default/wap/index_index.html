@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="__PUBLIC__/css/swiper.min.css">
   <link rel="stylesheet" href="//at.alicdn.com/t/font_1343574_hd53i68obnq.css">
   <script type="text/javascript" src="__PUBLIC__/js/yunu.js"></script>
-  <script type="text/javascript" src="__PUBLIC__/js/Superslide.js"></script>
+  <script type="text/javascript" src="__PUBLIC__/js/TouchSlide.1.1.js"></script>
   <script type="text/javascript" src="__PUBLIC__/js/swiper.min.js"></script>
 
 </head>
@@ -123,38 +123,31 @@
     <!-- 关于 -->
     <div class="i_box2 clearfix">
       <div class="center">
-        <yunu:type typeid='20'>
-          <div class="i_box2_tit clearfix">
-            <p><i>{$type.title} / {$type.subtitle}</i></p>
-            <span></span>
-          </div>
-        </yunu:type>
+        <div class=" titlewrap  tac"  >
+          <p><span class="index_title_bg_left">&nbsp;</span> <span class="index_title"><i>关于我们 </i></span>
+            <span class="index_title_bg_right">&nbsp;</span>
+          </p>
+          <p class="index_subtitle"> 一家集膏药加工、贴牌膏药加工、膏药连锁加盟一体的企业 </p>
+        </div>
         <div class="i_box2_content clearfix">
           <div class="i_box2_content1 fl">
             <yunu:type typeid='85'>
-              <div class="flimg">
-                <img src="__PUBLIC__/img/img1.png">
-              </div>
+
               <div class="i_box2_text fr">
                 <p>{$type.desc}</p>
+                <div class="i_box2_menu ">
+                    <a href="/index.php?s=index/category/index&id=85">公司简介</a>
+                    <a href="/index.php?s=index/category/index&id=30">联系方式</a>
+                    <a href="/index.php?s=index/category/index&id=73">在线留言</a>
+                 </div>
               </div>
               <div class="i_box2_img fl">
                 <img src="{$type.pic}">
               </div>
             </yunu:type>
-            <div class="i_box2_menu fl">
-              <yunu:type typeid='20'>
-                <a href="{$type.url}">公司简介</a>
-              </yunu:type>
-              <yunu:type typeid='30'>
-                <a href="{$type.url}">联系方式</a>
-              </yunu:type>
-              <yunu:type typeid='73'>
-                <a href="{$type.url}">在线留言</a>
-              </yunu:type>
-            </div>
+
           </div>
-          <div class="fr">
+          <div class="fr no">
             <div class="i_box2_fr_img">
               <div class="swiper-container">
                 <div class="swiper-wrapper">
@@ -185,7 +178,12 @@
 
     <!-- 产品 -->
     <div class="index_pr">
-      <h2 class="index_title" style="height:28px;">产品展示</h2>
+      <div class=" titlewrap clearfix tac pt50 " >
+        <p><span class="index_title_bg_left">&nbsp;</span>  <span class="index_title"><i>产品展示 </i></span>
+          <span class="index_title_bg_right">&nbsp;</span>
+        </p>
+        <p class="index_subtitle"> 为众多医药界同仁及企业提供优质产品</p>
+      </div>
       <div class="index_prs">
 
         <div class="picScroll" >
@@ -261,15 +259,15 @@
 
           </div>
           <script type="text/javascript">
-            jQuery(".picScroll").slide({
-              titCell: ".hd ul",
-              mainCell: ".bd ul",
-              autoPage: true,
-              effect: "left",
-              autoPlay: true,
-              vis: 2,
-              trigger: "click"
-            });
+            // jQuery(".picScroll").slide({
+            //   titCell: ".hd ul",
+            //   mainCell: ".bd ul",
+            //   autoPage: true,
+            //   effect: "left",
+            //   autoPlay: true,
+            //   vis: 2,
+            //   trigger: "click"
+            // });
           </script>
 
           <div class="tc">

@@ -19,4 +19,5 @@ return [
 	'auto_timestamp'=>'',
 	'datetime_format'=>'Y-m-d H:i:s',
 	'sql_explain'=>'',
+	'debug'=>true
 ];

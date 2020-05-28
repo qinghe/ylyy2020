@@ -46,7 +46,7 @@
 .content_box *:after {
   box-sizing: content-box;
 }
-.tac{
+.tac, .tc{
   text-align: center;
 }
 .ml5 {
@@ -2451,6 +2451,53 @@ body {
   padding-left: 3%;
 }
 
+.mian_type{
+  width: 100%;
+  min-width: 1200px;
+  margin: 0 auto;
+  height: 70px;
+  background: #f2ebd8;
+}
+
+.mian_type .types {
+  width: 1200px;
+    height: 70px;
+    margin: 0 auto;
+}
+.mian_type .mian_adr {
+  font-size: 16px;
+  line-height: 70px;
+  color: #221813;
+}
+
+
+.mian_type .mian_adr.crumbs p {
+  background: none;
+}
+.mian_type .types  ul li{
+  float: left;
+}
+.mian_type .types  ul li.on{
+  border: 1px solid #ff9600;
+  color: #ff9600;
+  
+}
+
+.mian_type .types .types_tems {
+  color: #221813;
+  float: left;
+  font-size: 18px;
+  height: 68px;
+  width: 130px;
+}
+.page-product-list .crumbs{
+  width: auto;
+  float: right;
+}
+.page-product-list .fcities{
+  background-color: transparent;
+}
+
 .pro_list {
   width: 100%;
   overflow: hidden;
@@ -2458,12 +2505,29 @@ body {
 }
 
 .pro_list ul li {
-  width: 23%;
-  padding: 10px 15px;
-  margin-right: 2.66%;
-  margin-bottom: 28px;
   float: left;
-  border: 1px solid #eee;
+  margin-left: 53px;
+}
+.pro_list ul .mian_pr_tem {
+  width: 260px;
+  height: 485px;
+  background: url(../img/sample/productlist1.png) no-repeat center top;
+  position: relative;
+ 
+}
+.pro_list ul li:nth-child(1) { margin-left: 0;}
+.pro_list ul li:nth-child(5) { margin-left: 0;}
+.pro_list ul li:nth-child(9) { margin-left: 0;}
+.pro_list ul li:nth-child(13) { margin-left: 0;}
+.pro_list ul li:nth-child(17) { margin-left: 0;}
+
+.pro_list ul li .mian_pr_tem2 {
+  width: 260px;
+  height: 485px;
+  background: url(../img/sample/productlist2.png) no-repeat center top;
+  position: absolute;
+  top: 0;
+  display: none;
 }
 
 .pro_list ul li a .imgauto {
@@ -2483,12 +2547,11 @@ body {
 }
 
 .pro_list ul li:hover {
-  border: 1px solid #036aac;
 }
-
-.pro_list ul li:hover img {
-  opacity: .6;
+.pro_list ul li:hover .mian_pr_tem2{
+  display: block;
 }
+ 
 
 .pro_list ul li:hover span {
   color: #036aac;
@@ -2985,7 +3048,7 @@ body {
 .crumbs {
   width: 100%;
   height: 34px;
-  background: #0269AB;
+  background: #f2ebd8;
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -2995,13 +3058,12 @@ body {
   height: 34px;
   background: url(../img/ds.png) no-repeat left;
   padding-left: 20px;
-  color:#fff;
   line-height: 34px;
 }
 
 .crumbs p a {
   font-size: 14px;
-  color: #fff;
+  color: #5a5a5a;
   line-height: 34px;
 }
 
@@ -3057,7 +3119,12 @@ body {
   color: #868686;
   line-height: 24px;
 }
+.page-product-detail .tit.protit{
+  padding: 10px 0;
+  color: #000;
+  text-align: center;
 
+}
 .pro_content {
   width: 100%;
   margin: 20px 0;
@@ -3079,9 +3146,8 @@ body {
   margin-top: 5px;
   line-height: 22px;
   font-size: 18px;
-  color: #2662bb;
   padding-bottom: 10px;
-  border-bottom: 1px dotted #ccc;
+  text-align: left;
 }
 
 .pro_content .pro_text .text {
@@ -3103,7 +3169,7 @@ body {
   display: block;
   color: #fff;
   line-height: 32px;
-  background: url(../img/sanj.png) no-repeat 5px center #4576be;
+  background: url(../img/sanj.png) no-repeat 5px center #ae3523;
   background-size: 16px;
   padding-left: 24px;
 }
@@ -3201,7 +3267,7 @@ div.zoomMask {
 }
 
 .pc-slide .preview .active-nav .imgauto {
-  border: 1px solid #4576be;
+  border: 1px solid #ae3523;
 }
 
 .pc-slide .preview .arrow-left {
@@ -3227,7 +3293,7 @@ div.zoomMask {
 }
 
 .page_title {
-  border-bottom: 1px solid #036aac;
+  border-bottom: 1px solid #ae3523;
   padding-top: 15px;
 }
 
@@ -3239,7 +3305,7 @@ div.zoomMask {
   display: block;
   color: #fff;
   line-height: 42px;
-  background: #036aac;
+  background: #ae3523;
   text-align: center;
   font-weight: normal;
 }
@@ -3596,7 +3662,15 @@ div.zoomMask {
   float: none;
   display: inline-block;
 }
+.pages .pagination a.cur{
+  background: #ae3523;
 
+}
+.pages .pagination a:hover {
+    color: #ae3523;
+    background: white;
+    border: 1px #ae3523 solid;
+}
 
 .case_list {
   width: 100%;
@@ -3779,7 +3853,7 @@ div.zoomMask {
 .showarea h3 {
   padding-bottom: 10px;
   font-size: 16px;
-  color: #036aac;
+  color: #ae3523;
   border-bottom: 1px solid #e4e4e4;
   display: block;
 }
@@ -3800,7 +3874,7 @@ div.zoomMask {
     margin-bottom: 12px;
 }
 .showarea .list a:hover {
-  color: #036aac;
+  color: #ae3523;
 }
 
 #message {

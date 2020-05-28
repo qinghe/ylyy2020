@@ -204,12 +204,12 @@
                       <div style="height:25px;"></div>
                       <div class="pic"><img src="{$list.pic}" alt="{$list.title}"></div>
 
-                      <div class="tc" style="font-size:20px;color:#221813;line-height:45px">0.3克*30粒</div>
+                      <div class="tc" style="font-size:20px;color:#221813;line-height:45px;visibility: hidden;">{$list.update_time|date='Y-m-d',###}</div>
                       <!-- <div class="tc" style="font-size:20px;color:#221813;line-height:45px">零售价: <span style="color:#ff9600">0</span>元</div> -->
                       <!-- <div class="tc" style="font-size:20px;color:#221813;line-height:45px">心脑血管清一清，血脂降了一身轻。</div> -->
                       <div style="height:10px;"></div>
                       <div style="padding:5px 10px;border:1px solid #ccc;width:80px;margin:0 auto;">
-                        <div class="fl"><img src="templates/default/images/mm.png" alt=""></div>
+                        <div class="fl"><img src="__PUBLIC__/img/sample/mm.png" alt=""></div>
                         <a href="{$list.url}">
                           <div class="fl" style="padding-top:3px;padding-left:3px;color:#565656">查看更多</div>
                         </a>
@@ -217,11 +217,11 @@
                       </div>
                       <div class="li2">
                         <div style="height:200px;"></div>
-                        <div class="tl" style="font-size:20px;color:#fff;line-height:35px">心脑血管清一清，血脂降了一身轻。</div>
+                        <div class="tl" style="font-size:20px;color:#fff;line-height:35px">{$list.subtitle}</div>
                         <div style="height:30px;"></div>
                         <div style="padding:5px 10px;border:1px solid #ccc;width:80px;margin:0 auto;">
-                          <div class="fl"><img src="templates/default/images/nm.png" alt=""></div>
-                          <a href="{$list.pic}" title="{$list.title}">
+                          <div class="fl"><img src="__PUBLIC__/img/sample/nm.png" alt=""></div>
+                          <a href="{$list.url}" title="{$list.title}">
                             <div class="fl" style="padding-top:3px;padding-left:3px;color:#fff">查看更多</div>
                           </a>
                           <div class="cl"></div>
@@ -250,7 +250,7 @@
           </script>
 
           <div class="tc">
-            <a href="index.php?p=products_list&amp;lanmu=2"><img src="templates/default/images/more.png" alt=""></a>
+            <a href="index.php?p=products_list&amp;lanmu=2"><img src="__PUBLIC__/img/sample/more.png" alt=""></a>
           </div>
 
         </div>
@@ -267,13 +267,13 @@
           </p>
          </div>
         <div class="index_news_type clearfix" style="margin-left:100px">
-          <div class="fl" style="width:310px;margin-top:7px"><img src="templates/default/images/xx.jpg" alt="" style="width:310px;"></div>
+          <div class="fl" style="width:310px;margin-top:7px"><img src="__PUBLIC__/img/sample/xx.jpg" alt="" style="width:310px;"></div>
           <div class="fl" style="width:350px;">
             <div class="fl index_news_type_tem tem1 act">公司动态</div>
             <div class="fl index_news_type_tem tem2 acts">行业动态</div>
             <div class="cl"></div>
           </div>
-          <div class="fl" style="width:340px;margin-top:7px"><img src="templates/default/images/xx.jpg" alt="" style="width:310px;">&nbsp;&nbsp;&nbsp;<img src="templates/default/images/nm.png" alt=""></div>
+          <div class="fl" style="width:340px;margin-top:7px"><img src="__PUBLIC__/img/sample/xx.jpg" alt="" style="width:310px;">&nbsp;&nbsp;&nbsp;<img src="__PUBLIC__/img/sample/nm.png" alt=""></div>
         </div>
 
         <div class="index_tem1 index_tem">
@@ -330,7 +330,7 @@
                   {$list.create_time|date='d',###}
                 </div>
                 <div class="tr" style="font-size:30px;">
-                  <img src="templates/default/images/news0.png" alt="" style="margin-right:3px;margin-bottom:14px">{$list.create_time|date='m',###}
+                  <img src="__PUBLIC__/img/sample/news0.png" alt="" style="margin-right:3px;margin-bottom:14px">{$list.create_time|date='m',###}
                 </div>
 
               </div>
@@ -361,7 +361,7 @@
                   {$list.create_time|date='d',###}
                 </div>
                 <div class="tr" style="font-size:30px;">
-                  <img src="templates/default/images/news0.png" alt="" style="margin-right:3px;margin-bottom:14px">{$list.create_time|date='m',###}
+                  <img src="__PUBLIC__/img/sample/news0.png" alt="" style="margin-right:3px;margin-bottom:14px">{$list.create_time|date='m',###}
                 </div>
 
               </div>

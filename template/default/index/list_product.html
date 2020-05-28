@@ -14,12 +14,13 @@
     <meta name="description" content="<if condition="strlen($category['seo_desc']) neq 0">{$category.seo_desc|str2sub=160, true}<else/>{$category.desc|str2sub=160, true}</if>">
     <script type="text/javascript" src="__PUBLIC__/js/jquery-1.12.4.min.js"></script>
     <link rel="stylesheet" href="__PUBLIC__/css/yunu.css">
+    <link rel="stylesheet" href="__PUBLIC__/css/ylyy.css">
     <link rel="stylesheet" href="__PUBLIC__/css/swiper.min.css">
     <script type="text/javascript" src="__PUBLIC__/js/yunu.js"></script>
     <script type="text/javascript" src="__PUBLIC__/js/Superslide.js"></script>
     <script type="text/javascript" src="__PUBLIC__/js/swiper.min.js"></script>
 </head>
-<body>
+<body class="page-product-list">
     <include file="public:header" />
 
     <div class="page_banner">
@@ -27,52 +28,75 @@
     </div>
 
     <div class="main container">
-    	<div class="center clearfix">
-    		<div class="main_l fl">
-                <p>
-                    <yunu:type typeid='$cid' type="parent">
-                        <span>{$type.title}</span>
-                        <i>{$type.subtitle}</i>   
-                    </yunu:type>            
-                </p>
-                <ul>
-                    <yunu:catlist cid="$category['id']" type="parent">
-                        <li <if condition="$catlist['id'] eq $cid || $catlist['id'] eq $category['pid']">class="on"</if>><a href="{$catlist.url}"><span>{$catlist.title}</span></a></li>
-                    </yunu:catlist>
-                </ul>
-                <div class="liuyan">
-                    <b>
-                        <yunu:type typeid='30'>
-                            <a href="{$type.url}">
-                                <img src="__PUBLIC__/img/lxa1.jpg" alt="图片名">
-                                <img src="__PUBLIC__/img/lxa2.jpg" alt="图片名">
-                            </a>
-                        </yunu:type>
-                    </b>
-                    <b>
-                        <yunu:type typeid='73'>
-                            <a href="{$type.url}">
-                                <img src="__PUBLIC__/img/lya1.jpg" alt="图片名">
-                                <img src="__PUBLIC__/img/lya2.jpg" alt="图片名">
-                            </a>
-                        </yunu:type>
-                    </b>
+        <div class="">
+            <div class="mian_type">
+                <div class="types clearfix">
+                    <!-- 分类 -->
+                        <ul class="fl">
+                            <yunu:catlist cid="$category['id']" type="parent">
+                                <li <if condition="$catlist['id'] eq $cid || $catlist['id'] eq $category['pid']">class="on"</if>>
+            
+                                    <a href="{$catlist.url}">
+                                        <div class="types_tems tac">
+                                            <span style="display:inline-block; padding-top:25px;margin-left:5px">{$catlist.title}</span>
+                                            
+                                        </div>
+                                    </a>
+                                </li>
+                            </yunu:catlist>
+                        </ul>
+                                   
+                        
+                    <div class="crumbs mian_adr" style="float:right;">
+                        <p>
+                            <yunu:position cid="$cid" delimiter="&gt;&gt;" />
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="main_r fr">
-                <div class="crumbs">
-                    <p>
-                        <yunu:position cid="$cid" delimiter="&gt;&gt;" />
-                    </p>
-                </div>
+        </div>
+    	<div class="center clearfix">
+
+  
+            <div class="">
+                
 	    		<div class="pro_list">
 					<ul>
                         <yunu:list cid="$cid" pagesize="8" orderby="sort asc">
                             <li>
-                                <a href="{$list.url}">
-                                    <div class="imgauto"><img src="{$list.pic}" alt="{$list.title}"></div>
-                                    <span>{$list.title}</span>
-                                </a>
+                                <div class="mian_pr_tem fl" style="margin-bottom:50px">
+                                    <div style="height:30px;"></div>
+                                    <div class="ellipsis tac" style="height:70px;line-height:70px;font-size:22px;color:#221813;padding:0 12px;" class="tc">
+                                        {$list.title}
+                                    </div>
+                                    <div class="mian_pr_tem_img tc">
+                                        <img src="{$list.pic|default='__PUBLIC__/img/sample/600.png'}" alt="{$list.title}" style="width:210px;height:210px;" title="{$list.title}">
+                                    </div>
+                                    <div style="height:15px;"></div>
+                                    <div class="tc" style="font-size:20px;color:#221813;line-height:45px;">{$list.specs}</div>
+                                    
+                                    <div style="height:20px"></div>
+                                    <div class="tac">
+                                        <a href="{$list.url}" style="padding:10px;border:1px solid #ccc;width:80px;margin:0 auto">
+                                            <img src="__PUBLIC__/img/sample/mm.png" alt="" style="vertical-align: text-top;"> <span  style="display:inline-block; padding-top:3px;padding-left:3px;color:#565656">查看更多</span>
+                                        </a>
+                                    </div>
+                                    <div class="mian_pr_tem2">
+                                        <div style="height:180px;"></div>
+                                        <div style="width:200px;margin:0 auto;color:#fff;font-size:20px">
+                                            {$list.subtitle}
+                                        </div>
+                                        <div style="height:30px"></div>
+                                        <div class="tac">
+                                            <a href="{$list.url}" style="padding:10px;border:1px solid #ccc;width:80px;margin:0 auto">
+                                                <img src="__PUBLIC__/img/sample/nm.png" alt="" style="vertical-align: text-top;"> <span  style="display:inline-block; padding-top:3px;padding-left:3px;color:#ffffff">查看更多</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+
                             </li>
                         </yunu:list>
                     </ul>
@@ -80,17 +104,19 @@
 				<div class="pages">
                     {$page}
 				</div>
-                <div class="flink clearfix">
-                    <div class="flink_tit mt30">
-                        <p></p>
-                        <span>地区产品</span>
-                    </div>
-                    <div class="flink_list clearfix">
-                        <ul>
-                            <yunu:area type="1">
+                <div class="  fcities">
+                    <div class="center  pt50 pb50">
+                      <div class="pt15 pb15 ">
+                        <p><span class="f18 fc">城市分站 </span> <span class="f16"> CITIES</span></p>
+              
+                      </div>
+                      <div class="flink_list">
+                        <ul class="pb10 ">
+                          <yunu:area type="1" limit="35">
                             <li><a href="{$area.url}">{$area.title}</a></li>
-                            </yunu:area>
+                          </yunu:area>
                         </ul>
+                      </div>
                     </div>
                 </div>
     		</div>

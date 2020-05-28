@@ -19,7 +19,7 @@
     <script type="text/javascript" src="__PUBLIC__/js/Superslide.js"></script>
     <script type="text/javascript" src="__PUBLIC__/js/swiper.min.js"></script>
 </head>
-<body>
+<body class="page-product-detail">
     <include file="public:header" />
 
     <div class="page_banner">
@@ -28,6 +28,7 @@
 
     <div class="main container">
     	<div class="center">
+
     		<div class="main_l fl" id="mhide">
                 <p>
                     <yunu:type typeid='$cid' type="parent">
@@ -65,6 +66,7 @@
                         <yunu:position cid="$cid" delimiter="&gt;&gt;" />
                     </p>
                 </div>
+                <h3 class="tit protit">{$content.title}</h3>
                 <div class="pro_content clearfix">
                     <div class="pro_pic clearfix">
                         <div class="pc-slide clearfix">
@@ -72,7 +74,7 @@
                                 <div class="swiper-container swiper-container-horizontal">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide img-center">
-                                            <div class="imgauto"><img src="{$content.pic}" rel="{$content.pic}" class="jqzoom" ></div>
+                                            <div class="imgauto"><img src="{$content.pic|default='__PUBLIC__/img/sample/600.png'}" rel="{$content.pic}" class="jqzoom" ></div>
                                         </div>
                                         <volist name="$content.piclist|str2arr='***'" id="v">
                                             <div class="swiper-slide img-center">
@@ -149,7 +151,7 @@
                         </script>
                     </div>
                     <div class="pro_text">
-                        <h3 class="tit protit">{$content.title}</h3>
+                        
                         <div class="text clearfix">
                             {$content.desc}
                             <a href="javascript:;" class="btn">在线订购</a>

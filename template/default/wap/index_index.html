@@ -132,7 +132,7 @@
           <p><span class="index_title_bg_left">&nbsp;</span> <span class="index_title"><i>关于我们 </i></span>
             <span class="index_title_bg_right">&nbsp;</span>
           </p>
-          <p class="index_subtitle"> 一家集膏药加工、贴牌膏药加工、膏药连锁加盟一体的企业 </p>
+          <p class="index_subtitle"> 一家集膏药加工、贴牌膏药加工、膏药加盟一体的企业 </p>
         </div>
         <div class="i_box2_content clearfix">
           <div class="i_box2_content1 fl">
@@ -291,7 +291,7 @@
       </div>
     </div>
     <!-- 新闻 -->
-    <div class="index_new pt50 pb25">
+    <div class="index_new pt30  ">
       <div class="index_news">
         <div class=" titlewrap  tac pb25" >
           <p><span class="index_title_bg_left">&nbsp;</span>  <span class="index_title"><i>新闻资讯 </i></span>
@@ -311,9 +311,9 @@
             <!-- <img src="" alt="" style="width:100%;">   -->
           </div>
           <yunu:list cid="28" limit="1" top="1">
-          <div style="font-size: 16px; line-height: 1.8em;">
+          <div class="topnews" style="font-size: 16px; line-height: 2.0em;">
             <a href="{$list.url}">
-              <div class="ellipsis fl f16" style="color:#fff; ">{$list.title} </div>
+              <div class="ellipsis fl f16" style="color:#fff; "> {$list.title} </div>
             </a>
             <div class="fr f16" style="position: relative;color:#fff;">
               {$list.create_time|date='m-d',###}
@@ -334,7 +334,7 @@
             <!-- <img src="uploadfile/image/20170721/20170721152314_82224.jpg" alt="" style="width:100%;">   -->
           </div>
 
-          <div style="font-size: 16px; line-height: 1.8em;">
+          <div class="topnews" style="font-size: 16px; line-height: 2.0em;">
             <a href="index.php?p=news_show&amp;id=24&amp;c_id=1&amp;lanmu=1">
               <div class="fl" style="font-size:16px;color:#fff;width:;">多部门《关于印发推进药品价格改革意见的通知》 药品最高零售价即将取消</div>
             </a>
@@ -351,23 +351,33 @@
         </div>
       </div>
       <div class="index_news_list list1 clearfix">
-        <ul> 
-        <yunu:list cid="28" limit="3" flag="1">
+        <yunu:list cid="28" limit="2" flag="1">
 
-          <li>
-            <div class="i_box4_time">
-              <p>
-                <span>{$list.create_time|date='d',###}</span>
-                <i>{$list.create_time|date='Y-m',###}</i>
-              </p>
+          <div class="index_news_list_tem pt15">
+            <div class="fl">
+              <div style="width:80px;">
+                <div class="tl" style="font-size:18px;">
+                  {$list.create_time|date='d',###}
+                </div>
+                <div class="tr" style="font-size:30px;">
+                  <img src="__PUBLIC__/img/sample/news0.png" alt="" style="margin-right:3px;margin-bottom:14px">{$list.create_time|date='m',###}
+                </div>
+
+              </div>
             </div>
-            <div class="i_box4_text">
-              <a href="{$list.url}"><span>{$list.title}</span></a>
-              <p>{$list.content|str2sub=100, true}</p>
+            <div class="fl" style="width:230px;margin-left:40px">
+              <a href="{$list.url}">
+                <div style="font-size:16px;line-height:30px">{$list.title} </div>
+              </a>
+              <div style="width:230px;height:66px;overflow: hidden;text-indent:2em">
+
+                {$list.ftitle}</div>
             </div>
-          </li>
+            <div class="cl"></div>
+
+          </div>
         </yunu:list>
-        </ul>
+
 
       </div>
       <div class="index_news_list list2 clearfix no">
@@ -404,11 +414,11 @@
     </div>
 
  
-    <!-- 新闻 -->
+    <!-- 联系我们 -->
     <div class="i_box4 clearfix">
       <div class="center">
         <div class="i_box4_content clearfix">
-          <div class=" titlewrap  tac  pt40"  >
+          <div class=" titlewrap  tac  pt30"  >
             <p><span class="index_title_bg_left">&nbsp;</span> <span class="index_title"><i>联系方式 </i></span>
               <span class="index_title_bg_right">&nbsp;</span>
             </p>

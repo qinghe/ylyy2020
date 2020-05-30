@@ -300,7 +300,11 @@ background-size:contain;
   line-height: 42px;
   height: 42px;
 }
+.index_tem .topnews{
+  padding-left: 1.5em;
+  background: url(../img/sample/nm.png) no-repeat left center;
 
+}
 /* 首页产品 */
 .index_pr {
   width: 100%;
@@ -321,7 +325,10 @@ background-size:contain;
   font-size: 12px;
   color:#000;
   opacity: 1;
-  background: rgba(0,0,0,0.2);
+  background:#CCCCCC;
+}
+.picScroll .swiper-pagination-bullet:focus{
+  outline: none;
 }
 .picScroll .swiper-pagination-bullet-active {
   color:#ae3523;
@@ -526,13 +533,13 @@ background-size:contain;
     width: 1em;
     height: .1em;
     margin: 0;
-    background: #76838f;
+    background: #ff9600;
     border-radius: 1px;
 }
 .navbar-default .hamburger:before,
 .navbar-default .hamburger .hamburger-bar,
 .navbar-default .hamburger:after {
-    background: #76838f;
+    background: #ff9600;
 }
 .navbar-inverse .hamburger:before,
 .navbar-inverse .hamburger .hamburger-bar,
@@ -582,16 +589,18 @@ background-size:contain;
 
 @media screen and (max-width: 450px) {
   .index_title_bg_left {
-    width: 1.6em;
-    height: 1.6em;
-    line-height: 1.6em;
+    width: 1.2em;
+    height: 1.2em;
+    line-height: 1.2em;
     background-size: contain;
+    margin: 0.2em 0;
   }
   .index_title_bg_right {
-    width: 1.6em;
-    height: 1.6em;
-    line-height: 1.6em;
+    width: 1.2em;
+    height: 1.2em;
+    line-height: 1.2em;
     background-size: contain;
+    margin: 0.2em 0;
   }
   .i_box2 .i_box2_tit span{
     display: inline-block;
@@ -602,13 +611,15 @@ background-size:contain;
   }
    
   .titlewrap .index_title  i {
-    font-size: .14rem;
+    font-size: .15rem;
     height: 1.6em;
     line-height: 1.6em;
-    padding-left: 0.8em;
+    padding-left: 0.6em;
+    letter-spacing: 0.6em;
   }
   .titlewrap .index_subtitle{
     font-size: .12rem;    
+    padding: .5em 0 .8em;
   }
   .i_box2 .i_box2_tit .index_subtitle {
     display: none;

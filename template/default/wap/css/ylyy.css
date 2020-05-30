@@ -175,8 +175,8 @@ background-size:contain;
   height: 35px;
   font-size: 18px;
   line-height: 35px;
-  border: 1px solid #fff;
-  border-radius: 17px;
+  /* border: 1px solid #fff;
+  border-radius: 17px; */
   cursor: pointer;
 }
 
@@ -193,12 +193,20 @@ background-size:contain;
 }
 
 .act {
-  color: #ff9600;
-  background: #fff;
+  color: #fff;
+  /* background: #fff; */
+  background-image: url('../img/sample/tab.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:contain;
 }
 
 .acts {
   color: #fff;
+  background-image: url('../img/sample/tab_s.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:contain;
 }
 
 .index_news_list {

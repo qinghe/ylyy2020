@@ -1,0 +1,37 @@
+<yunu:list cid="$cid" pagesize="8" orderby="sort asc">
+                            <li>
+                                <div class="mian_pr_tem fl" style="margin-bottom:50px">
+                                    <div style="height:30px;"></div>
+                                    <div class="ellipsis tac" style="height:70px;line-height:70px;font-size:22px;color:#221813;padding:0 12px;" class="tc">
+                                        {$list.title}
+                                    </div>
+                                    <div class="mian_pr_tem_img tc">
+                                        <img src="{$list.pic|default='__PUBLIC__/img/sample/600.png'}" alt="{$list.title}" style="width:210px;height:210px;" title="{$list.title}">
+                                    </div>
+                                    <div style="height:15px;"></div>
+                                    <div class="tc" style="font-size:20px;color:#221813;line-height:45px;">{$list.specs}</div>
+                                    
+                                    <div style="height:20px"></div>
+                                    <div class="tac">
+                                        <a href="{$list.url}" style="padding:10px;border:1px solid #ccc;width:80px;margin:0 auto">
+                                            <img src="__PUBLIC__/img/sample/mm.png" alt="" style="vertical-align: text-top;"> <span  style="display:inline-block; padding-top:3px;padding-left:3px;color:#565656">查看更多</span>
+                                        </a>
+                                    </div>
+                                    <div class="mian_pr_tem2">
+                                        <div style="height:180px;"></div>
+                                        <div style="width:200px;margin:0 auto;color:#fff;font-size:20px">
+                                            {$list.subtitle}
+                                        </div>
+                                        <div style="height:30px"></div>
+                                        <div class="tac">
+                                            <a href="{$list.url}" style="padding:10px;border:1px solid #ccc;width:80px;margin:0 auto">
+                                                <img src="__PUBLIC__/img/sample/nm.png" alt="" style="vertical-align: text-top;"> <span  style="display:inline-block; padding-top:3px;padding-left:3px;color:#ffffff">查看更多</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+
+                            </li>
+</yunu:list>

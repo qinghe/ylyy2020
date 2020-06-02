@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="__PUBLIC__/css/yunu.css">
     <link rel="stylesheet" href="__PUBLIC__/css/ylyy.css">
     <link rel="stylesheet" href="__PUBLIC__/css/swiper.min.css">
+    <script type="text/javascript" src="__PUBLIC__/js/lodash.min.js"></script>
     <script type="text/javascript" src="__PUBLIC__/js/yunu.js"></script>
     <script type="text/javascript" src="__PUBLIC__/js/Superslide.js"></script>
     <script type="text/javascript" src="__PUBLIC__/js/swiper.min.js"></script>
@@ -66,14 +67,14 @@
                             <li>
                                 <div class="mian_pr_tem fl" style="margin-bottom:50px">
                                     <div style="height:30px;"></div>
-                                    <div class="ellipsis tac" style="height:70px;line-height:70px;font-size:22px;color:#221813;padding:0 12px;" class="tc">
+                                    <div class="prroduct-title ellipsis tac" style="height:70px;line-height:70px;font-size:22px;color:#221813;padding:0 12px;" class="tc">
                                         {$list.title}
                                     </div>
                                     <div class="mian_pr_tem_img tc">
                                         <img src="{$list.pic|default='__PUBLIC__/img/sample/600.png'}" alt="{$list.title}" style="width:210px;height:210px;" title="{$list.title}">
                                     </div>
                                     <div style="height:15px;"></div>
-                                    <div class="tc" style="font-size:20px;color:#221813;line-height:45px;">{$list.specs}</div>
+                                    <div class="product-specs tc" style="font-size:20px;color:#221813;line-height:45px;">{$list.specs}</div>
                                     
                                     <div style="height:20px"></div>
                                     <div class="tac">
@@ -103,7 +104,8 @@
 				</div>
 				<div class="pages">
                     {$page}
-				</div>
+                </div>
+                
                 <div class="  fcities">
                     <div class="center  pt50 pb50">
                       <div class="pt15 pb15 ">
@@ -122,6 +124,8 @@
     		</div>
     	</div>
     </div>
+
+
 
     <include file="public:footer" />
 </body>

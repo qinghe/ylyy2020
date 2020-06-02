@@ -1,7 +1,11 @@
     <div class="sun_footer">
         <div class="container">
             <ul class="celarfix fc">
-                <li><a href="<yunu:url name='home'/>">
+                <?php
+                    $chkid = isset($cid) ? $cid : 0;
+                    $catid = isset($category) ? $category['pid'] : 0;
+                ?>
+                <li <if condition="$nav['id'] eq $chkid || $nav['id'] eq $catid">class="on"</if>><a href="<yunu:url name='home'/>">
 
 <i class="iconfont icon-shouye"></i>
 
@@ -12,11 +16,11 @@
                         <i class="iconfont icon-mobilephone"></i>
                         <p>电话</p>
                     </a></li>
-                <li><a href="/index.php?s=category/index&id=21">
+                <li <if condition="$nav['id'] eq $chkid || $nav['id'] eq $catid">class="on"</if>><a href="/index.php?s=category/index&id=21">
                         <i class="iconfont icon-all"></i>
                         <p>分类</p>
                     </a></li>
-               <li><a href="/index.php?s=index/category/index&id=30">
+               <li <if condition="$nav['id'] eq $chkid || $nav['id'] eq $catid">class="on"</if>><a href="/index.php?s=index/category/index&id=30">
                         <i class="iconfont icon-map"></i>
                         <p>位置</p>
                     </a></li>

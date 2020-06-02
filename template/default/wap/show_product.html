@@ -15,19 +15,26 @@
     <script type="text/javascript" src="__PUBLIC__/js/jquery-1.12.4.min.js"></script>
     <link rel="stylesheet" href="__PUBLIC__/css/yunu.css">
     <link rel="stylesheet" href="__PUBLIC__/css/swiper.min.css">
+    <link rel="stylesheet" href="__PUBLIC__/css/ylyy.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1343574_myw2d14xwe.css">
     <script type="text/javascript" src="__PUBLIC__/js/yunu.js"></script>
     <script type="text/javascript" src="__PUBLIC__/js/Superslide.js"></script>
     <script type="text/javascript" src="__PUBLIC__/js/swiper.min.js"></script>
 </head>
-<body>
+<body class="page-product-detail">
     <include file="public:header" />
-
-    <div class="page_banner">
-        <img src="__PUBLIC__/img/pagebanner.jpg">
+    <div style="visibility:hidden;height:70px"><img src="<yunu:config name='site_logo'>"> </div>
+    <div class="search  sea">
+        <form action="<yunu:url name='search'/>" method="post">
+          <input class=" sea1" type="text" name="key" placeholder="请输入产品名称">
+          <input type="image" class="fr sea2" src="__PUBLIC__/img/sample/sea.png" value="搜索">
+        </form>
     </div>
 
     <div class="main container">
     	<div class="center">
+            <h3 class="tit protit">{$content.title}</h3>
+            <div class="tc" style="line-height:2.5em">时间 : 07-26 点击率:2671</div>
     		<div class="main_l fl" id="mhide">
                 <p>
                     <yunu:type typeid='$cid' type="parent">
@@ -149,7 +156,6 @@
                         </script>
                     </div>
                     <div class="pro_text">
-                        <h3 class="tit protit">{$content.title}</h3>
                         <div class="text clearfix">
                             {$content.desc}
                             <a href="javascript:;" class="btn">在线订购</a>

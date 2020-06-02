@@ -15,6 +15,9 @@
     <script type="text/javascript" src="__PUBLIC__/js/jquery-1.12.4.min.js"></script>
     <link rel="stylesheet" href="__PUBLIC__/css/yunu.css">
     <link rel="stylesheet" href="__PUBLIC__/css/swiper.min.css">
+    <link rel="stylesheet" href="__PUBLIC__/css/ylyy.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1343574_myw2d14xwe.css">
+    <script type="text/javascript" src="__PUBLIC__/js/lodash.min.js"></script>
     <script type="text/javascript" src="__PUBLIC__/js/yunu.js"></script>
     <script type="text/javascript" src="__PUBLIC__/js/Superslide.js"></script>
     <script type="text/javascript" src="__PUBLIC__/js/swiper.min.js"></script>
@@ -25,78 +28,162 @@
     <div class="page_banner">
         <img src="__PUBLIC__/img/pagebanner.jpg">
     </div>
-
+    <div class="search  sea">
+        <form action="<yunu:url name='search'/>" method="post">
+          <input class=" sea1" type="text" name="key" placeholder="请输入产品名称">
+          <input type="image" class="fr sea2" src="__PUBLIC__/img/sample/sea.png" value="搜索">
+        </form>
+    </div>
     <div class="main container">
+ 
     	<div class="center clearfix">
-    		<div class="main_l fl">
-                <p>
-                    <yunu:type typeid='$cid' type="parent">
-                        <span>{$type.title}</span>
-                        <i>{$type.subtitle}</i>   
-                    </yunu:type>            
-                </p>
-                <ul>
-                    <yunu:catlist cid="$category['id']" type="parent">
-                        <li <if condition="$catlist['id'] eq $cid || $catlist['id'] eq $category['pid']">class="on"</if>><a href="{$catlist.url}"><span>{$catlist.title}</span></a></li>
-                    </yunu:catlist>
-                </ul>
-                <div class="liuyan">
-                    <b>
-                        <yunu:type typeid='30'>
-                            <a href="{$type.url}">
-                                <img src="__PUBLIC__/img/lxa1.jpg" alt="图片名">
-                                <img src="__PUBLIC__/img/lxa2.jpg" alt="图片名">
-                            </a>
-                        </yunu:type>
-                    </b>
-                    <b>
-                        <yunu:type typeid='73'>
-                            <a href="{$type.url}">
-                                <img src="__PUBLIC__/img/lya1.jpg" alt="图片名">
-                                <img src="__PUBLIC__/img/lya2.jpg" alt="图片名">
-                            </a>
-                        </yunu:type>
-                    </b>
-                </div>
-            </div>
-            <div class="main_r fr">
+    		 
+            <div class="   ">
                 <div class="crumbs">
                     <p>
                         <yunu:position cid="$cid" delimiter="&gt;&gt;" />
                     </p>
                 </div>
-	    		<div class="pro_list">
+	    		<div id="list" class="pro_list">
 					<ul>
                         <yunu:list cid="$cid" pagesize="8" orderby="sort asc">
-                            <li>
-                                <a href="{$list.url}">
-                                    <div class="imgauto"><img src="{$list.pic}" alt="{$list.title}"></div>
-                                    <span>{$list.title}</span>
-                                </a>
+                            <li class="mian_pr_tem fl">
+                                <div>
+                                    <div class="tc" style="font-size:16px;line-height:35px">{$list.title}</div>
+                                    <div class="tc"><img src="{$list.pic|default='__PUBLIC__/img/sample/600.png'}" alt="{$list.title}" style="width:90%;"></div>
+                                    <div class="tc" style="font-size:1em;line-height:25px">{$list.specs}</div>
+                                    <!-- <div class="tc" style="padding:0 8%;font-size:0.9em">简介:全面排痰，告别老慢支。</div> -->
+                                    <div style="height:10px;"></div>
+                                    <a href="{$list.url}">
+                                        <div class="index_more tc" style="width:50%;line-height:1.5em">
+                                            <div style="font-size:0.9em;">查看详情</div>
+                                            <div class="cl"></div>
+                                        </div>
+                                    </a>
+                                    <div style="height:10px;"></div>
+                                    <div class="mian_pr_tem1">
+                                        <div style="visibility:hidden">
+                                            <div class="tc" style="font-size:16px;line-height:35px">{$list.title}</div>
+                                            <div class="tc"><img src="{$list.pic|default='__PUBLIC__/img/sample/600.png'}" alt="" style="width:90%;"></div>
+                                            <div class="tc" style="font-size:1em;line-height:25px">{$list.specs}</div>
+                                            <!-- <div class="tc" style="padding:0 8%;font-size:0.9em">{$list.subtitle}</div> -->
+                                            <div style="height:10px;"></div>
+                                            <a href="{$list.url}">
+                                                <div class="index_more tc" style="width:50%;line-height:1.1em">
+                                                    <div style="font-size:0.9em;">查看详情</div>
+                                                    <div class="cl"></div>
+                                                </div>
+                                            </a>
+                                            <div style="height:10px;"></div>
+                                        </div>
+                                        <div style="position:absolute;top:0;width:100%;">
+                                            <div style="height:80px;"></div>
+                                            <div style="width:85%;margin:0 auto;color:#fff;font-size:1.1em;line-height:1.8em">{$list.subtitle}</div>
+                                            <div style="height:10px;"></div>
+                                            <a href="{$list.url}">
+                                                <div class="index_more tc" style="width:50%;line-height:1.5em">
+                                                    <div style="font-size:1em;color:#fff">查看详情</div>
+                                                    <div class="cl"></div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                
                             </li>
                         </yunu:list>
                     </ul>
 				</div>
 				<div class="pages">
-                    {$page}
+                    <div class="pagination">
+                        <button id="load_more_btn" class="cur"> 查看更多 </button>
+                    </div> 
+                    
+                    <script >
+                        let url = 'http://<yunu:config name="site_url" >' + '/index.php?s=api/list&cid=' + {$cid} ;
+
+                        window.yunu.loadMore({url: url, data: { pages: 1, limit: 2 }, 
+                        beforeSend: function(){
+                           $('.pagination .la-ball-fall').show()
+                        },
+                        done:function(response){
+                            console.debug("loadMore done response", response)
+                            $('#list ul').append( _.template($('#tpl1').html())({data: response.data}) );
+                            $('.pagination .la-ball-fall').hide()
+
+                        }});
+                   </script>
 				</div>
-                <div class="flink clearfix">
-                    <div class="flink_tit mt30">
-                        <p></p>
-                        <span>地区产品</span>
-                    </div>
-                    <div class="flink_list clearfix">
-                        <ul>
-                            <yunu:area type="1">
+                <div class="  fcities pb50">
+                    <div class="center pb50">
+                      <div class="pt15 pb15 ">
+                        <p><span class="f18 fc">城市分站 </span> <span class="f16"> CITIES</span></p>
+              
+                      </div>
+                      <div class="flink_list">
+                        <ul class="pb10 ">
+                          <yunu:area type="1" limit="35">
                             <li><a href="{$area.url}">{$area.title}</a></li>
-                            </yunu:area>
+                          </yunu:area>
                         </ul>
+                      </div>
                     </div>
                 </div>
     		</div>
     	</div>
     </div>
+    <script type="text/template" id="tpl1">
+        <%_.each(data, function (item) { %>
 
+            <li class="mian_pr_tem fl">
+                <div>
+                    <div class="tc" style="font-size:16px;line-height:35px"><%=item.title%></div>
+                    <div class="tc"><img src="<%=item.pic%>" alt="<%=item.title%>" style="width:90%;"></div>
+                    <div class="tc" style="font-size:1em;line-height:25px"><%=item.specs%></div>
+                    <!-- <div class="tc" style="padding:0 8%;font-size:0.9em">简介:全面排痰，告别老慢支。</div> -->
+                    <div style="height:10px;"></div>
+                    <a href="<%=item.url%>">
+                        <div class="index_more tc" style="width:50%;line-height:1.5em">
+                            <div style="font-size:0.9em;">查看更多</div>
+                            <div class="cl"></div>
+                        </div>
+                    </a>
+                    <div style="height:10px;"></div>
+                    <div class="mian_pr_tem1">
+                        <div style="visibility:hidden">
+                            <div class="tc" style="font-size:16px;line-height:35px"><%=item.title%></div>
+                            <div class="tc"><img src="<%=item.pic%>" alt="" style="width:90%;"></div>
+                            <div class="tc" style="font-size:1em;line-height:25px"><%=item.specs%></div>
+                            <!-- <div class="tc" style="padding:0 8%;font-size:0.9em">{$list.subtitle}</div> -->
+                            <div style="height:10px;"></div>
+                            <a href="<%=item.url%>">
+                                <div class="index_more tc" style="width:50%;line-height:1.1em">
+                                    <div style="font-size:0.9em;">查看更多</div>
+                                    <div class="cl"></div>
+                                </div>
+                            </a>
+                            <div style="height:10px;"></div>
+                        </div>
+                        <div style="position:absolute;top:0;width:100%;">
+                            <div style="height:80px;"></div>
+                            <div style="width:85%;margin:0 auto;color:#fff;font-size:1.1em;line-height:1.8em"><%=item.subtitle%></div>
+                            <div style="height:10px;"></div>
+                            <a href="<%=item.url%>">
+                                <div class="index_more tc" style="width:50%;line-height:1.5em">
+                                    <div style="font-size:1em;color:#fff">查看更多</div>
+                                    <div class="cl"></div>
+                                </div>
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </li>
+        <% });%>
+
+    </script>
     <include file="public:footer" />
 </body>
 </html>

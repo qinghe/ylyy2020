@@ -1883,7 +1883,7 @@ body {
 .header .head_top_content .head_logo .head_tit {
   margin-left: 10px;
   padding: 12px 20px 0 0;
-  border-right: 1px dotted #028BCF;
+  border-right: 1px dotted #ae3523;
   height: 64px;
 }
 
@@ -1903,7 +1903,7 @@ body {
 .header .head_top_content .head_logo .head_text {
   height: 64px;
   padding: 12px 0 0 20px;
-  border-left: 1px dotted #000;
+  border-left: 1px dotted #ae3523;
 }
 
 .header .head_top_content .head_logo .head_text p {

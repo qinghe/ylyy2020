@@ -27,44 +27,37 @@
     </div>
 
     <div class="main container">
-    	<div class="center">
-    		<div class="main_l fl" id="mhide">
-                <p>
-                    <yunu:type typeid='$cid' type="parent">
-                        <span>{$type.title}</span>
-                        <i>{$type.subtitle}</i>   
-                    </yunu:type>            
-                </p>
-                <ul>
-                    <yunu:catlist cid="$category['id']" type="parent">
-                        <li <if condition="$catlist['id'] eq $cid || $catlist['id'] eq $category['pid']">class="on"</if>><a href="{$catlist.url}"><span>{$catlist.title}</span></a></li>
-                    </yunu:catlist>
-                </ul>
-                <div class="liuyan">
-                    <b>
-                        <yunu:type typeid='30'>
-                            <a href="{$type.url}">
-                                <img src="__PUBLIC__/img/lxa1.jpg" alt="图片名">
-                                <img src="__PUBLIC__/img/lxa2.jpg" alt="图片名">
-                            </a>
-                        </yunu:type>
-                    </b>
-                    <b>
-                        <yunu:type typeid='73'>
-                            <a href="{$type.url}">
-                                <img src="__PUBLIC__/img/lya1.jpg" alt="图片名">
-                                <img src="__PUBLIC__/img/lya2.jpg" alt="图片名">
-                            </a>
-                        </yunu:type>
-                    </b>
+        <div class="">
+            <div class="mian_type">
+                <div class="types clearfix">
+                    <!-- 分类 -->
+                        <ul class="fl">
+                            <yunu:catlist cid="$category['id']" type="parent">
+                                <li <if condition="$catlist['id'] eq $cid || $catlist['id'] eq $category['pid']">class="on"</if>>
+            
+                                    <a href="{$catlist.url}">
+                                        <div class="types_tems tac">
+                                            <span style="display:inline-block; padding-top:25px;margin-left:5px">{$catlist.title}</span>
+                                            
+                                        </div>
+                                    </a>
+                                </li>
+                            </yunu:catlist>
+                        </ul>
+                                   
+                        
+                    <div class="crumbs mian_adr" style="float:right;">
+                        <p>
+                            <yunu:position cid="$cid" delimiter="&nbsp; &gt; &nbsp;" />
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="main_r fr">
-                <div class="crumbs">
-                    <p>
-                        <yunu:position cid="$cid" delimiter="&gt;&gt;" />
-                    </p>
-                </div>
+        </div>
+    	<div class="center">
+    		 
+            <div class=" ">
+                
                 <div class="content_tit">
                     <h3>{$content.title}</h3>
                     <p>

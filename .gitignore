@@ -30,3 +30,4 @@ node_modules
 public/*
 caches
 .env
+config/database.php

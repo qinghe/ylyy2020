@@ -18,6 +18,5 @@ return [
 	'resultset_type'=>'array',
 	'auto_timestamp'=>'',
 	'datetime_format'=>'Y-m-d H:i:s',
-	'sql_explain'=>'',
-	'debug'=>false
+	'sql_explain'=>''
 ];

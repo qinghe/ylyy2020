@@ -597,9 +597,10 @@ background-size:contain;
 
 
 .pages .pagination button {
-  padding: 0 13px;
-  line-height: 28px;
-  height: 28px;
+  padding: 0 0.2em;
+  width: 3.2em;
+  height: 3.2em;
+  border-radius: 100%;
   float: none;
   display: inline-block;
   border: none;

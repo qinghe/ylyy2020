@@ -2243,6 +2243,8 @@ body {
   right: 0;
   z-index: 99;
   display: none;
+  background: #f5efde;
+
 }
 
 .app_menu ul {
@@ -2250,19 +2252,26 @@ body {
   /* box-shadow: 0px 1px 10px 1px #ccc;  */
 
 }
-
+.app_menu ul li:nth-child(1){
+  border-top: none;
+}
 .app_menu ul li {
   width: 100%;
-  border-bottom: 1px solid #999899;
+  border-top: 1px solid #999899;
 }
 .app_menu ul li.on{
   color: #ae3523 !important;
 }
 .app_menu ul li > a {
   width: 50%;
-  display: block;
+  display: inline-block;
 }
-
+.app_menu ul li > i {
+  float: right;
+  line-height: 42px;
+  padding-right: 20px;
+}
+ 
 .app_menu ul li > a span {
   font-size: 14px;
   width: 100%;
@@ -2274,7 +2283,7 @@ body {
 }
 
 .app_menu ul li.on {
-  background: url(../img/bottom.png) no-repeat 95% 15px;
+  /* background: url(../img/bottom.png) no-repeat 95% 15px; */
   background-size: 16px;
 }
 
@@ -2359,7 +2368,7 @@ body {
 .main_l p {
   width: 100%;
   height: 105px;
-  background: #036aac;
+  background: #ae3523;
   padding-top: 22px;
 }
 

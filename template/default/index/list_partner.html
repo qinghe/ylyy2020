@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="applicable-device" content="pc,wap">
+    <meta name="MobileOptimized" content="width" />
+    <meta name="HandheldFriendly" content="true" />
+    <title><if condition="strlen($category['seo_title']) neq 0">{$category.seo_title}<else/>{$category.title}-<yunu:config name="site_title"></if></title>
+    <meta name="keywords" content="<if condition="strlen($category['seo_keywords']) neq 0">{$category.seo_keywords}<else/>{$category.title}</if>">
+    <meta name="description" content="<if condition="strlen($category['seo_desc']) neq 0">{$category.seo_desc|str2sub=160, true}<else/>{$category.desc|str2sub=160, true}</if>">
+    <script type="text/javascript" src="__PUBLIC__/js/jquery-1.12.4.min.js"></script>
+    <link rel="stylesheet" href="__PUBLIC__/css/yunu.css">
+    <link rel="stylesheet" href="__PUBLIC__/css/ylyy.css">
+    <link rel="stylesheet" href="__PUBLIC__/css/swiper.min.css">
+    <script type="text/javascript" src="__PUBLIC__/js/yunu.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/js/Superslide.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/js/swiper.min.js"></script>
+</head>
+<body class="page-partner">
+    <include file="public:header" />
+
+    <div class="page_banner">
+        <img src="__PUBLIC__/img/banner_partner.jpg">
+    </div>
+    
+    <div class="main container">
+        <div class="policy clearfix">
+            <div class="center pt50 pb50">
+                <div class=" clearfix tac pb50"  >
+                  <p><span class="index_title_bg_left">&nbsp;</span> <span class="index_title"><i>合作优势 </i></span>
+                    <span class="index_title_bg_right">&nbsp;</span>
+                  </p>
+                </div>
+
+                <div class="policy-content">
+                    <p>1.提供巨大的利润空间；</p>
+
+                    <p>2.提供良好的售货服务；</p>
+                    
+                    <p>3.提供合理的运作空间；</p>
+                    
+                    <p>4.提供严格的市场保护；完成任务提供返点；</p>
+                    
+                    <p>5.及时提供货源，确保全国范围2-10天内到货：</p>
+                    
+                    <p>6.提供合法的经营手续；</p>
+                    
+                    <p>7.提供区域或独家代理。</p>
+                    
+                    <p><span style="line-height: 1.6;">8.进行客户回访制度；对大小客户高度负责；耐心解释客户反馈回来的信息。</span></p>
+                    
+                    <p>9.在一个月内给客户调换货</p>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class=" index_adv clearfix">
+            <div class="center  pt25 pb50">
+              <div class="   ">
+                <div class="    tac pd25" >
+                  <p><span class="index_title_bg_left">&nbsp;</span>  <span class="index_title"><i>服务优势 </i></span>
+                    <span class="index_title_bg_right">&nbsp;</span>
+                  </p>
+                  <p class="index_subtitle"> 以优质的品牌服务于客户，受到合作伙伴的一致追捧和好评。 </p>
+      
+                 </div>
+              </div>
+              <div class=" pt15 pb15">
+                <ul class="advs"> <li > <div class="adv"><p class="p1">OEM </p><p class="p2"> 自主品牌加工</p> </div></li>
+                  <li> <div class="adv"><p class="p1">ODM </p><p class="p2"> 品牌输出专家</p></div> </li>
+                    <li> <div class="adv"><p class="p1">20年专注 </p><p class="p2"> 医药贴膏贴剂</br>研发生产</p></div> </li>
+                      <li> <div class="adv"><p class="p1">OBM </p><p class="p2"> 现有品牌转让</p></div> </li>
+                        <li> <div class="adv"><p class="p1">私人订制 </p><p class="p2"> 满足个性需求</p></div> </li>
+                 </ul>
+              </div>
+            </div>
+        </div>
+      
+        <div class="center  pt25 pb50">
+            <div class="   ">
+                <div class="    tac pd25" >
+                  <p><span class="index_title_bg_left">&nbsp;</span>  <span class="index_title"><i>我们的产品 </i></span>
+                    <span class="index_title_bg_right">&nbsp;</span>
+                  </p>
+      
+                 </div>
+            </div>
+                 
+                <div class="pro_list">
+					<ul>
+                        <yunu:list cid="21" limit="8" flag="1" orderby="sort asc">
+                            <li>
+                                <a href="{$list.url}">
+                                    <div class="imgauto"><img src="{$list.pic}" alt="{$list.title}"></div>
+                                    <span>{$list.title}</span>
+                                </a>
+                            </li>
+                        </yunu:list>
+                    </ul>
+				</div>
+        </div>
+        <!-- 市场愿景 -->
+        <div class="center partner-market pb50">
+            <div class="   ">
+                <div class="    tac pb50" >
+                  <p><span class="index_title_bg_left">&nbsp;</span>  <span class="index_title"><i>市场愿景 </i></span>
+                    <span class="index_title_bg_right">&nbsp;</span>
+                  </p>
+      
+                 </div>
+            </div>
+                 
+                <div  >
+					<ul>
+                        <li>
+                                <div class="imgauto"><img src="__PUBLIC__/img/sample/partner1.jpg" alt="市场愿景 1"></div>
+                                <p>中药配方，真材实料，利润空间大。中药配方，真材实料，利润空间大。</p>
+                        </li>
+                        <li>
+                                <div class="imgauto"><img src="__PUBLIC__/img/sample/partner2.jpg" alt="市场愿景 1"></div>
+                                <p>中药配方，真材实料，利润空间大。中药配方，真材实料，利润空间大。</p>
+                        </li>
+                        <li>
+                            <div class="imgauto"><img src="__PUBLIC__/img/sample/partner3.jpg" alt="市场愿景 1"></div>
+                            <p>中药配方，真材实料，利润空间大。中药配方，真材实料，利润空间大。</p>
+                        </li>
+                    </ul>
+				</div>
+        </div>
+        
+
+    </div>
+            <!-- 我们的品牌 -->
+            <div class=" partner-trademark pb50 pt50" style="margin-bottom: -50px;">
+                <div class="center">
+    
+                    <div class="   ">
+                        <div class="    tac pb50" >
+                            <p><span class="index_title_bg_left">&nbsp;</span>  <span class="index_title"><i>我们的品牌 </i></span>
+                            <span class="index_title_bg_right">&nbsp;</span>
+                            </p>
+                
+                        </div>
+                    </div>
+                        
+                    <div  >
+                        <ul>
+                            <li> <div class="imgauto"><img src="__PUBLIC__/img/sample/tr3.png" alt="我们的品牌 四济堂"></div> </li>
+                            <li> <div class="imgauto"><img src="__PUBLIC__/img/sample/tr6.png" alt="我们的品牌 速靓"></div> </li>
+                            <li> <div class="imgauto"><img src="__PUBLIC__/img/sample/tr7.png" alt="我们的品牌 亿霖"></div> </li>
+                            <li> <div class="imgauto"><img src="__PUBLIC__/img/sample/tr8.png" alt="我们的品牌 云之水"></div> </li>
+                            <li> <div class="imgauto"><img src="__PUBLIC__/img/sample/tr9.png" alt="我们的品牌 老边家"></div> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    <include file="public:links" />
+
+    <include file="public:footer" />
+</body>
+</html>

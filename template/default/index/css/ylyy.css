@@ -173,17 +173,84 @@ font-weight: bold;
 .fcities .flink_list{
   border-bottom: 1px solid #909399;
 }
-  .fcities .flink_list ul li {
-    float: left;
-    margin-right: 28px;
-    margin-bottom: 8px;
-  }
+.fcities .flink_list ul li {
+  float: left;
+  margin-right: 28px;
+  margin-bottom: 8px;
+}
 
-  .fcities .flink_list ul li a {
-    font-size: 12px;
-    color: #5a5a5a;
-  }
+.fcities .flink_list ul li a {
+  font-size: 12px;
+  color: #5a5a5a;
+}
 
-  .fcities .flink_list ul li a:hover {
-    color: #036aac;
-  }
+.fcities .flink_list ul li a:hover {
+  color: #036aac;
+}
+
+/* 招商加盟 */
+.page-partner .policy-content p{
+  border-bottom: 1px solid #cccccc;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 2.6em;
+  width: 750px;
+  margin: 0 auto;
+}
+.page-partner .policy-content p:first-child{
+  border-top: 1px solid #cccccc;
+
+}
+
+.page-partner .index_adv{
+  color: #fff;
+  background:url(../img/sample/partner-advbg.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.page-partner .index_adv .index_title_bg_left{
+  background-image: url(../img/sample/news_left.png);
+}
+.page-partner .index_adv .index_title_bg_right{
+  background-image: url(../img/sample/news_right.png);
+}
+.page-partner .index_adv .index_title i{
+  color: #fff;
+}
+.page-partner .index_adv .adv{
+  color: #fff;
+  border-color:#fff;
+}
+
+.page-partner  .pro_list ul li{
+  width: 25%;
+  margin-left: 0;
+  margin-bottom: 20px;
+}
+.page-partner  .pro_list ul li a .imgauto img{
+    width: auto;
+    height: 203px;
+    margin: 0 auto;
+    display: block;
+}
+.page-partner  .partner-market li{
+  width: 33.333333%;
+  padding: 16px;
+  float:left;
+}
+.page-partner  .partner-market li:last-child{
+  float:right;
+}
+.page-partner  .partner-market li p{
+  font-size: 16px;
+  padding: 12px 0;
+}
+.page-partner  .partner-trademark{
+  background-color: #fff;
+}
+.page-partner  .partner-trademark ul li{
+  width: 20%;
+  float:left;
+  margin-left: 0;
+  margin-bottom: 20px;
+}

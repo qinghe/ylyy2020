@@ -37,29 +37,7 @@
                         <i>{$type.subtitle}</i>   
                     </yunu:type>            
                 </p>
-                <ul>
-                    <yunu:catlist cid="$category['id']" type="parent">
-                        <li <if condition="$catlist['id'] eq $cid || $catlist['id'] eq $category['pid']">class="on"</if>><a href="{$catlist.url}"><span>{$catlist.title}</span></a></li>
-                    </yunu:catlist>
-                </ul>
-                <div class="liuyan">
-                    <b>
-                        <yunu:type typeid='30'>
-                            <a href="{$type.url}">
-                                <img src="__PUBLIC__/img/lxa1.jpg" alt="图片名">
-                                <img src="__PUBLIC__/img/lxa2.jpg" alt="图片名">
-                            </a>
-                        </yunu:type>
-                    </b>
-                    <b>
-                        <yunu:type typeid='73'>
-                            <a href="{$type.url}">
-                                <img src="__PUBLIC__/img/lya1.jpg" alt="图片名">
-                                <img src="__PUBLIC__/img/lya2.jpg" alt="图片名">
-                            </a>
-                        </yunu:type>
-                    </b>
-                </div>
+                 
             </div>
             <div class="main_r fr">
                 <div class="crumbs">

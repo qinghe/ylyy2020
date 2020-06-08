@@ -893,6 +893,11 @@ background-size:contain;
              transform: translateY(145%);
    }
  }
+ @media screen and (max-width: 768px) {
+   .container.main{
+     padding-bottom: 60px;
+   }
+ }
 
 @media screen and (max-width: 450px) {
   .index_title_bg_left {

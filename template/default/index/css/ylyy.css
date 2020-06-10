@@ -116,7 +116,7 @@ background-position: left center;  background-repeat: no-repeat;
 .picScroll-left .bd ul li .pic{ text-align:center;width:205px; height:205px;margin:0 auto;padding:5px; }
 .picScroll-left .bd ul li .pic img{width:200px; height:200px;  }
 
-.picScroll-left .bd ul li .title{ line-height:24px; font-size:30px;font-family:宋体;font-weight:bold; color:#221813; }
+.picScroll-left .bd ul li .title{ height:2em; padding: 0 1em; line-height:30px; font-size:30px;font-family:宋体;font-weight:bold; color:#221813; }
 
 
 /* 服务优势 */

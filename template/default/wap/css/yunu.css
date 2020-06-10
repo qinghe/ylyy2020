@@ -4054,7 +4054,13 @@ div.zoomMask {
     color: #fff !important;
     border: none;
   }
-   
+  .pro_list ul li.mian_pr_tem:hover .index_more{
+    color: #fff !important;
+    border-color: #fff;
+  }
+  .pro_list ul li.mian_pr_tem:hover .index_more div{
+    border-color: #fff;
+  }
   .pro_list ul li .mian_pr_tem1 {
     width: 100%;
     padding: 8% 0;

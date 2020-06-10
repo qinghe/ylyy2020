@@ -202,16 +202,15 @@
                   <li class="swiper-slide ">
                             <div class="pic">
                                 <div style="height:15px;"></div>
-                                <div class="ellipsis title" style="font-size:0.8em">{$list.title}</div>
+                                <div class="ellipsis title" style="padding: 0 18px;font-size:0.8em">{$list.title}</div>
                                 <div class="pics" style="width:70%;margin:0 auto;"><img src="{$list.pic}" alt="{$list.title}"></div>
                                 <div style="line-height:25px;font-size:0.7em">0.3克*30粒</div>
 
                                 <div style="padding:0 8%;font-size:0.7em"></div>
                                 <div style="height:10px;"></div>
                                 <a href="{$list.url}">
-                                    <div class="index_more tc" style="width:50%;line-height:1.1em">
-                                        <div style="font-size:0.7em;">查看更多</div>
-                                        <div class="cl"></div>
+                                    <div class="index_more tc" style=" line-height:1.1em;width:100%;">
+                                        <div style="font-size:0.7em; display:inline-block;padding:0.02rem 0.06rem;color:#666666; border: 1px solid #666666;">查看更多</div>
                                     </div>
                                 </a>
                                 <div style="height:20px;"></div>
@@ -310,7 +309,7 @@
             <img src="__PUBLIC__/img/sample/news1.jpg" alt="">
             <!-- <img src="" alt="" style="width:100%;">   -->
           </div>
-          <yunu:list cid="28" limit="1" top="1">
+          <yunu:list cid="88" limit="1" top="1">
           <div class="topnews" style="font-size: 16px; line-height: 2.0em;">
             <a href="{$list.url}">
               <div class="ellipsis fl f16" style="color:#fff; "> {$list.title} </div>
@@ -333,21 +332,26 @@
             <img src="__PUBLIC__/img/sample/news2.jpg" alt="">
             <!-- <img src="uploadfile/image/20170721/20170721152314_82224.jpg" alt="" style="width:100%;">   -->
           </div>
+          <yunu:list cid="89" limit="1" top="1">
 
           <div class="topnews" style="font-size: 16px; line-height: 2.0em;">
-            <a href="index.php?p=news_show&amp;id=24&amp;c_id=1&amp;lanmu=1">
-              <div class="fl" style="font-size:16px;color:#fff;width:;">多部门《关于印发推进药品价格改革意见的通知》 药品最高零售价即将取消</div>
+            <a href="{$list.url}">
+              <div class="ellipsis fl f16" style="color:#fff; "> {$list.title} </div>
             </a>
-            <div class="fr" style="position: relative;">
-            </div>
+            <div class="fr f16" style="position: relative;color:#fff;">
+              {$list.create_time|date='m-d',###}
+             </div>
+            <div class="cl"></div>
 
           </div>
 
-          <a href="index.php?p=news_show&amp;id=24&amp;c_id=1&amp;lanmu=1">
+          <a href="{$list.url}">
             <div style="font-size:14px;color:#fff;line-height:1.6em;text-indent:2em">
-              自去年10月，国家发改委发布征求药品价格放开的意见，不过后来随着价格司多位高官落马和改革后卫计委、人保部职责如何分配，一时没了下文。不过最近坊间流传多部门酝酿的《关于印发推进药品价格改革意见的通知》，自2015年7月1日起，除麻醉和一类精神药品外，取消原政府制定的药品价格。并基本上确定了以医保...
+              {$list.content|str2sub=70, true}
             </div>
           </a>
+        </yunu:list>
+
         </div>
       </div>
       <div class="index_news_list list1 clearfix">

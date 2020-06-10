@@ -55,10 +55,9 @@
                                     <!-- <div class="tc" style="padding:0 8%;font-size:0.9em">简介:全面排痰，告别老慢支。</div> -->
                                     <div style="height:10px;"></div>
                                     <a href="{$list.url}">
-                                        <div class="index_more tc" style="width:50%;line-height:1.5em">
+                                        <div class="index_more tc" style="line-height:1.5em">
                                             <div style="font-size:0.9em;">查看详情</div>
-                                            <div class="cl"></div>
-                                        </div>
+                                         </div>
                                     </a>
                                     <div style="height:10px;"></div>
                                     <div class="mian_pr_tem1">
@@ -69,10 +68,9 @@
                                             <!-- <div class="tc" style="padding:0 8%;font-size:0.9em">{$list.subtitle}</div> -->
                                             <div style="height:10px;"></div>
                                             <a href="{$list.url}">
-                                                <div class="index_more tc" style="width:50%;line-height:1.1em">
+                                                <div class="index_more tc" style="line-height:1.1em">
                                                     <div style="font-size:0.9em;">查看详情</div>
-                                                    <div class="cl"></div>
-                                                </div>
+                                                 </div>
                                             </a>
                                             <div style="height:10px;"></div>
                                         </div>
@@ -81,10 +79,9 @@
                                             <div style="width:85%;margin:0 auto;color:#fff;font-size:1.1em;line-height:1.8em">{$list.subtitle}</div>
                                             <div style="height:10px;"></div>
                                             <a href="{$list.url}">
-                                                <div class="index_more tc" style="width:50%;line-height:1.5em">
+                                                <div class="index_more tc" style="line-height:1.5em">
                                                     <div style="font-size:1em;color:#fff">查看详情</div>
-                                                    <div class="cl"></div>
-                                                </div>
+                                                 </div>
                                             </a>
                                         </div>
                                         
@@ -103,7 +100,7 @@
                     <script >
                         let url = 'http://<yunu:config name="site_url" >' + '/index.php?s=api/list&cid=' + {$cid} ;
 
-                        window.yunu.loadMore({url: url, data: { pages: 1, limit: 2 }, 
+                        window.yunu.loadMore({url: url, data: { pages: 1, limit: 8 }, 
                         beforeSend: function(){
                            $('.pagination .la-ball-fall').show()
                         },
@@ -138,15 +135,14 @@
 
             <li class="mian_pr_tem fl">
                 <div>
-                    <div class="tc" style="font-size:16px;line-height:35px"><%=item.title%></div>
+                    <div class="tc ellipsis" style="font-size:16px;line-height:35px"><%=item.title%></div>
                     <div class="tc"><img src="<%=item.pic%>" alt="<%=item.title%>" style="width:90%;"></div>
                     <div class="tc" style="font-size:1em;line-height:25px"><%=item.specs%></div>
                     <!-- <div class="tc" style="padding:0 8%;font-size:0.9em">简介:全面排痰，告别老慢支。</div> -->
                     <div style="height:10px;"></div>
                     <a href="<%=item.url%>">
-                        <div class="index_more tc" style="width:50%;line-height:1.5em">
+                        <div class="index_more tc" style=" line-height:1.5em">
                             <div style="font-size:0.9em;">查看更多</div>
-                            <div class="cl"></div>
                         </div>
                     </a>
                     <div style="height:10px;"></div>
@@ -158,9 +154,8 @@
                             <!-- <div class="tc" style="padding:0 8%;font-size:0.9em">{$list.subtitle}</div> -->
                             <div style="height:10px;"></div>
                             <a href="<%=item.url%>">
-                                <div class="index_more tc" style="width:50%;line-height:1.1em">
+                                <div class="index_more tc" style=" line-height:1.1em">
                                     <div style="font-size:0.9em;">查看更多</div>
-                                    <div class="cl"></div>
                                 </div>
                             </a>
                             <div style="height:10px;"></div>
@@ -170,9 +165,8 @@
                             <div style="width:85%;margin:0 auto;color:#fff;font-size:1.1em;line-height:1.8em"><%=item.subtitle%></div>
                             <div style="height:10px;"></div>
                             <a href="<%=item.url%>">
-                                <div class="index_more tc" style="width:50%;line-height:1.5em">
+                                <div class="index_more tc" style=" line-height:1.5em">
                                     <div style="font-size:1em;color:#fff">查看更多</div>
-                                    <div class="cl"></div>
                                 </div>
                             </a>
                         </div>

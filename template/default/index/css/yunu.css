@@ -3700,6 +3700,7 @@ div.zoomMask {
 .case_list ul li .fl .imgauto {
   width: 100%;
   height: 185px;
+  text-align: center;
 }
 .case_list ul li .fl .imgauto img {
   max-width: 100%;

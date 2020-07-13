@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="__PUBLIC__/css/yunu.css">
   <link rel="stylesheet" href="__PUBLIC__/css/swiper.min.css">
   <link rel="stylesheet" href="__PUBLIC__/css/ylyy.css">
-  <link rel="stylesheet" href="//at.alicdn.com/t/font_1859354_g9y7caq0nmu.css">
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1859354_ao3oy7yjriu.css">
   <script type="text/javascript" src="__PUBLIC__/js/yunu.js"></script>
   <script type="text/javascript" src="__PUBLIC__/js/swiper.min.js"></script>
 
@@ -204,7 +204,7 @@
                                 <div style="height:15px;"></div>
                                 <div class="ellipsis title" style="padding: 0 18px;font-size:0.8em">{$list.title}</div>
                                 <div class="pics" style="width:70%;margin:0 auto;"><img src="{$list.pic}" alt="{$list.title}"></div>
-                                <div style="line-height:25px;font-size:0.7em">0.3克*30粒</div>
+                                <div style="line-height:25px;font-size:0.7em">{$list.specs}</div>
 
                                 <div style="padding:0 8%;font-size:0.7em"></div>
                                 <div style="height:10px;"></div>
@@ -219,7 +219,7 @@
                                         <div style="height:15px;"></div>
                                         <div class="title" style="font-size:0.8em">{$list.title}</div>
                                         <div class="pics" style="width:70%;margin:0 auto;"><img src="{$list.pic}" alt="{$list.title}"></div>
-                                        <div style="line-height:25px;font-size:0.7em">0.3克*30粒</div>
+                                        <div style="line-height:25px;font-size:0.7em">{$list.specs}</div>
 
                                         <div style="padding:0 8%;font-size:0.7em"></div>
                                         <div style="height:10px;"></div>
@@ -234,7 +234,7 @@
                                     <div style="position:absolute;top:0;width:100%;">
                                         <div style="height:80px;"></div>
                                         <div style="padding:0 15%;color:#fff" class="tl">
-                                            心脑血管清一清，血脂降了一身轻。
+                                            {$list.title}
                                         </div>
                                         <div style="height:10px;"></div>
                                         <a href="{$list.url}">
@@ -449,7 +449,11 @@
               <span>邮箱：
                 <yunu:block name='email' /></span>
             </p>
-             
+            <p class="contact-ewm">
+              <b><i class="iconfont icon-wechat"></i></b>
+              <span>微信：
+                <yunu:block name='ewm' /></span>
+            </p>  
           </div>
         </div>
       </div>
@@ -460,12 +464,12 @@
     <div class="  fcities pt20">
       <div class="center  ">
         <div class="pt15 pb15 ">
-          <p><span class="f18 fc">友情链接 </span> <span class="f16"> LINKS</span></p>
+          <p><span class="f18 fc">亿霖店铺 </span> <span class="f16"> LINKS</span></p>
 
         </div>
         <div class="flink_list">
           <ul class="pb10 ">
-            <yunu:link type="1" limit="35">
+            <yunu:link type="1"  orderby="sort asc" limit="35">
               <li><a href="{$link.url}">{$link.title}</a></li>
             </yunu:link>
           </ul>
